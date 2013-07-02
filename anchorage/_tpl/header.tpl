@@ -30,9 +30,9 @@
                             <div class="btn-group user-buttons">
                               <a href="{{ $view->url(['controller' => 'auth', 'action' =>'index'], 'default') }}" class="btn"><i class="icon-user"></i>&nbsp; Login</a>
                               <a href="/user" class="btn"><i class="icon-group"></i>&nbsp; Community</a>
-                              <a href="#" class="btn rss-icon"><i class="icon-rss-sign"></i></a>
-                              <a href="#" class="btn fb-icon"><i class="icon-facebook-sign"></i></a>
-                              <a href="#" class="btn tw-icon"><i class="icon-twitter"></i></a>asdfds
+                              <a href="/en/static/rss" class="btn rss-icon"><i class="icon-rss-sign"></i></a>
+                              <a href="http://facebook.com/sourcefabric" class="btn fb-icon"><i class="icon-facebook-sign"></i></a>
+                              <a href="http://twitter.com/sourcefabric" class="btn tw-icon"><i class="icon-twitter"></i></a>asdfds
                             </div>
                         </div> 
                     </div>
