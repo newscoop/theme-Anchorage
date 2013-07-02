@@ -1,0 +1,584 @@
+@import "mixins.less";
+
+/***************************** */
+/******** Begin Layout ******* */
+/***************************** */
+
+/* --- Begin General Elements */
+
+body{
+    background: #d9d9d9;
+}
+
+h1, h2, h3, h4, h5, h6{
+    a, a:hover{
+        color: #000;        
+    }
+}
+
+
+figure{ 
+    margin:0; 
+    figcaption{
+        text-align: center;
+        font-size: 11px;
+        margin-top:0px;
+    }
+}
+
+.bold-weight{font-weight: 700}
+.normal-weight{font-weight: 400}
+
+.full-width{width:100% !important;}
+
+/* End General Elements --- */
+
+/* --- Begin Header */
+
+#header{
+    .header-top{
+        font-size: 12px;
+        height: 40px;
+        background: #b6b6b6;
+        .top-block-left{
+            background: #333;
+            height: 40px;
+        }
+        .top-block-right{
+            background: #b6b6b6;
+            color:#fff;
+        }
+    }
+
+    .form-search{
+        float: right;
+        margin-right: 15px;
+        .search-query{
+            height: 15px;
+            margin-top:5px;
+            width: 80px;
+            .trans(width,0.5s);
+        }
+        .big-search{
+            width: 150px;
+            .trans(width,0.5s);
+        }
+    }
+
+    .banner{
+        height: 82px;
+        background: #fff;
+        .linear-gradient(#fff,#f4f4f4,75%);
+
+        .date-header{
+            width: 25%;
+            text-align: center;
+            line-height: 85px;
+            color:#ababab;
+            font-size: 12px;
+        }
+    }
+
+    .social-links{
+        width: 24%;
+        margin-left: 18px;
+        text-align: left;
+        line-height: 85px;
+        font-size: 14px;
+        a{
+            margin-right: 10px;
+        }
+    }
+
+    #logo{
+        margin:0px 0px 0px 50px;
+        width: 50%;
+    }
+
+    #main-menu{
+        background: #fff;
+        height: 30px;
+        a{
+            display: inline-block;
+            padding: 5px 15px;
+            font-size: 12px;
+        }
+    }
+}
+
+/* End Header --- */
+
+
+/* --- Begin Content Elements */
+
+#main{
+    background: #f2f2f2;
+}
+
+#main-content{
+    padding:15px 0px 15px 15px;
+}
+
+/* End General Content Elements --- */
+
+/* --- Begin Index */
+
+.articles{
+    border-bottom: #c7c7c7 1px solid;
+
+    .featured-thumb{
+        background: #fff;
+        padding:20px 15px 5px 15px;
+        position: relative;
+        .landing-title{
+            position: absolute;
+            top:0;
+            left:0px;
+            background: #333;
+            color:#fff;
+            font-size: 11px;
+            padding:0px 15px;
+            border-left:#626262 15px solid;
+            b{
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    h2{
+        font-size: 14px;
+        margin-bottom: 0px;
+        line-height: 1.6;
+    }
+    .excerpt{
+        font-size: 13px;
+    }
+    .article-links{
+        clear:both;
+        a{
+            display: block;
+            margin-right: 10px;
+            float: left;
+        }
+    }
+}
+
+.featured-article{
+    margin-bottom:20px;
+    h2{
+        font-size: 16px;
+        border-top: #9a9a9a 1px dotted;
+        padding-top:5px;
+        margin-top:20px;
+    }
+}
+
+.articles-list{
+    position: relative;
+    margin-bottom: 15px;
+    .secundary-thumb{
+        float: left;
+        position: absolute;
+        bottom:0px;
+        left:15px;
+        border-left:#fff 1px solid;
+        border-right:#fff 1px solid;
+        border-top:#fff 1px solid;
+    }
+    header,.excerpt{
+        width: 75%;
+    }
+    h2{
+        margin-top: 5px;
+    }
+}
+
+.extra-articles{
+    display: inline-block;
+    width: 48%;
+    h4{
+        margin-top: 15px;
+    }
+    .articles-link{
+        display: block;
+        margin-top:8px;
+        margin-bottom: 8px;
+    }
+}
+
+.left-block{
+    margin-right: 18px;
+    .box-shadow(1px,0px,0px,0px,#d8d8d8);
+    border-right:#fff 1px solid;
+}
+
+#map{
+    margin-top:25px;
+}
+
+#videos{
+    margin-bottom: 15px;
+    .video{
+        width: 185px;
+        margin-right: 16px;
+        float: left;
+
+        .title{
+            padding:10px 0px;
+            display: block;
+        }
+    }
+}
+/* End Index --- */
+
+/* --- Begin Sidebar */
+
+#sidebar{
+    border-left:#d7d7d7 1px solid;
+    .box-shadow(-1px,0px,0px,0px,#fff);
+    height: 100%;
+
+    > .block{
+        padding:5px 15px 5px 15px;
+    }
+
+    #graph{
+        padding-top:10px;
+        img{
+            background: #fff;
+            padding: 5px;
+            width: 95%
+        }
+    }
+    #login-form{
+        .form-horizontal .control-label {
+            width: 60px;
+        }
+        .form-horizontal .controls {
+            margin-left: 80px;
+        }
+    }
+
+    #extra{
+        padding-top:20px;
+        .ad{
+            margin-bottom: 20px;
+        }
+    }
+
+    #most-read{
+        .most-read-articles{
+            font-size: 11px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            .most-read-title{
+                font-weight: bold;
+                font-size: 11px;
+            }
+        }
+    }
+
+    #premium-articles{
+        font-size: 11px;
+        .premium-articles{
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+        .premium-articles-left{
+            float: left;
+            width: 25%;
+            img{
+                border:#fff 1px solid;
+            }
+        }
+        .premium-articles-right{
+            float: right;
+            width: 70%;
+        }
+    }
+
+    #articles-slider{
+        margin-bottom:0px;
+        .caption{
+            height: 25px;
+            line-height:25px;
+            text-align: center;
+            font-size: 11px;
+            background: #fff;
+            display: block;
+        }
+    }
+
+    #community-feed{
+        font-size: 12px;
+        .activity{
+            margin-bottom: 15px;
+        }
+    }
+
+    // Weather external widget
+    .weatherFeed {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 90%;
+        width: 100%;
+        margin-top:10px;
+    }
+    .weatherFeed a { color: #888; }
+    .weatherFeed a:hover {
+        color: #000;
+        text-decoration: none;
+    }
+    .weatherItem {
+        padding: 20px;
+        text-align: right;
+    }
+    .weatherCity { text-transform: uppercase; }
+    .weatherTemp {
+        font-size: 2.8em;
+        font-weight: bold;
+    }
+    .weatherDesc, .weatherCity, .weatherForecastDay  { font-weight: bold; }
+    .weatherDesc { margin-bottom: 0.4em; }
+    .weatherRange, .weatherWind, .weatherLink, .weatherForecastItem { font-size: 0.8em; }
+    .weatherLink, .weatherForecastItem {
+        margin-top: 0.5em;
+        text-align: left;
+    }
+    .weatherForecastItem {
+        padding: 0.5em 0.5em 0.5em 80px;
+        background-color: #fff;
+        background-position: left center;
+    }
+    .weatherForecastDay { font-size: 1.1em; }
+
+}
+
+/* End Sidebar --- */
+
+/* --- Begin Footer */
+
+#footer{
+    .footer-widgets{
+        > .block{
+            margin-top:20px;
+            margin-bottom: 20px;
+            a{
+                display: block;
+                font-size: 12px;
+                margin: 5px 0px 5px 30px;
+            }
+        }
+    }
+    .bottom-footer{
+        font-size: 12px;
+        text-align: center;
+        height: 50px;
+        line-height: 50px;
+    }
+  
+}
+
+/* End Footer --- */
+
+/* --- Begin Single Page */
+
+h1.page-title{
+    font-size: 20px;
+    margin-top:0px;
+    line-height: 30px;
+}
+
+.single-page{
+    p{
+        font-size: 12px;
+    }
+    .image{
+        background: #fff;
+        padding:20px 15px 5px 15px;
+        float: left;
+        margin-right:15px;
+    }
+}
+
+#comments-block{
+    background: #c4c2c3;
+    padding:15px 10px;
+    margin-top:20px;
+    .comment{
+        background: #fff;
+        margin:0px 5px 15px 5px;
+        .box-shadow(0px,0px,2px,1px,#aeabad);
+        border:#9a989a 1px solid;
+        font-size: 12px;
+        .comment-content{
+            padding: 5px 10px;
+            background: #fff;
+            float: left;
+            width: 65%;
+
+        }
+        .comment-author{
+            background: #f0f0f0;
+            padding: 5px 10px;
+            float: right;
+            width: 25%;
+            height: 100%;
+        }
+    }
+
+    h4{
+        padding-left: 5px;
+    }
+
+    #comment-form{        
+        .form-column-left{
+            float: left;
+            width: 65%;
+        } 
+        .form-column-right{
+            float: right;
+            width: 25%;
+            position: relative;
+        }
+        .control-label{
+            font-size: 12px;
+            text-align: right;
+            width: 80px;
+        }
+        .controls{
+            margin-left:100px;
+            textarea{
+                width: 100%;
+            }
+            input,textarea{
+                .rounded-corners(0px);
+            }
+        }
+
+        .control-group{
+            margin-bottom:10px;
+        }
+
+        #comment-button{
+            position: absolute;
+            bottom: 10px;
+        }   
+    }
+}
+
+
+
+/* End Single Page --- */
+
+
+/* --- Begin Section page */
+
+.section-page{
+    .articles-list{
+        .section-thumb{
+            background: #fff;
+            padding:15px;
+            float: left;
+            margin-right:15px;
+        }
+        header{
+            margin-bottom: 15px;
+        }
+        header,.excerpt{
+            width: 38%;
+        }
+    }
+    .extra-articles{
+        width: 100%;
+    }
+    .section-ad{
+        margin-top:25px;
+    }
+}
+
+/* End Section Page --- */
+
+
+/* --- Begin Archive page */
+
+.archive-page{
+    .archive-list{
+        height: 70px;
+        width: 100%;
+        background: #fff;
+        border:#cccccc 1px solid;
+        .box-shadow(0px,1px,0px,0px,#fff);
+        margin-bottom: 15px;
+        .archive-border{
+            width: 40px;
+            background: #e5e5e5;
+            height: 100%;
+            float: left;
+            margin-right:20px;
+        }
+        .archive-title{
+            margin-top:15px;
+            display: block;
+            font-size: 18px;
+        }
+        .published-date{
+            display: block;
+            font-size: 12px;
+        }
+    }
+
+}
+
+
+/* End Archive Page --- */
+
+/* --- Begin community */
+
+.community-page{
+    .user-list{
+        height: 70px;
+        width: 100%;
+        background: #fff;
+        border:#cccccc 1px solid;
+        .box-shadow(0px,1px,0px,0px,#fff);
+        margin-bottom: 15px;
+        .avatar{
+            float: left;
+            margin-right: 5px;
+            padding:15px;
+        }
+        .user-title{
+            margin-top:15px;
+            display: block;
+            font-size: 18px;
+        }
+        .member{
+            display: block;
+            font-size: 12px;
+        }
+    }
+}
+
+/* End community --- */
+
+/* --- Begin Debate */
+
+/* End Debate --- */
+
+
+/* --- Begin Profile */
+
+
+/* End Profile --- */
+
+
+/* --- Begin Registration and Login Form */
+
+
+
+/* End Registration and Login Form --- */
+
+/***************************** */
+/******** End Layout ********* */
+/***************************** */
+
