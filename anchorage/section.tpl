@@ -1,10 +1,10 @@
-{{ include "_tpl/_html-head.html" }}
+{{ include "_tpl/_html-head.tpl" }}
 
 <body>
     <!-- Begins Main Container -->
     <div class="container">
 
-        {{ include "_tpl/header.html" }}
+        {{ include "_tpl/header.tpl" }}
 
         <!-- Begins main content -->
         <section role="main">
@@ -116,7 +116,7 @@
                         <!-- Begins Sidebar -->
                         <aside id="sidebar-container" class="span4 column">
 
-                            {{ include "_tpl/sidebar-article.html" }}
+                            {{ include "_tpl/sidebar-article.tpl" }}
                             
                         </aside>
                         <!-- / End Sidebar -->
@@ -127,6 +127,6 @@
         </section> 
         <!-- / End main content -->
 
-{{ include "_tpl/footer.html" }}
+{{ include "_tpl/footer.tpl" }}
 
-{{ include "_tpl/_html-footer.html" }}
+{{ include "_tpl/_html-footer.tpl" }}

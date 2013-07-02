@@ -1,10 +1,10 @@
-{{ include "_tpl/_html-head.html" }}
+{{ include "_tpl/_html-head.tpl" }}
 
 <body>
     <!-- Begins Main Container -->
     <div class="container">
 
-        {{ include "_tpl/header.html" }}
+        {{ include "_tpl/header.tpl" }}
 
         <!-- Begins main content -->
         <section role="main">
@@ -33,14 +33,14 @@
 
                                 <p>Sed posuere consectetur est at lobortis. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
 
-                                {{ include "_tpl/comments.html" }}
+                                {{ include "_tpl/comments.tpl" }}
 
                             </div>
                         </div>
                         <!-- Begins Sidebar -->
                         <aside id="sidebar-container" class="span4 column">
 
-                            {{ include "_tpl/sidebar-article.html" }}
+                            {{ include "_tpl/sidebar-article.tpl" }}
                             
                         </aside>
                         <!-- / End Sidebar -->
@@ -51,6 +51,6 @@
         </section> 
         <!-- / End main content -->
 
-{{ include "_tpl/footer.html" }}
+{{ include "_tpl/footer.tpl" }}
 
-{{ include "_tpl/_html-footer.html" }}
+{{ include "_tpl/_html-footer.tpl" }}
