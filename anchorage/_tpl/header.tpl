@@ -28,8 +28,8 @@
                         </hgroup>
                         <div class="date-header pull-right">
                             <div class="btn-group user-buttons">
-                              <a href="#" class="btn"><i class="icon-user"></i>&nbsp; Login</a>
-                              <a href="#" class="btn"><i class="icon-group"></i>&nbsp; Community</a>
+                              <a href="{{ $view->url(['controller' => 'auth', 'action' =>'index'], 'default') }}" class="btn"><i class="icon-user"></i>&nbsp; Login</a>
+                              <a href="/user" class="btn"><i class="icon-group"></i>&nbsp; Community</a>
                               <a href="#" class="btn rss-icon"><i class="icon-rss-sign"></i></a>
                               <a href="#" class="btn fb-icon"><i class="icon-facebook-sign"></i></a>
                               <a href="#" class="btn tw-icon"><i class="icon-twitter"></i></a>asdfds
@@ -39,14 +39,12 @@
 
                     <div class="span12">
                         <nav id="main-menu">
-                            <a href="#">HOME</a>
-                            <a href="#">POLITICS</a>
-                            <a href="#">BUSINESS</a>
-                            <a href="#">SCI/TECH</a>
-                            <a href="#">HEALTH</a>
-                            <a href="#">ENTERTAIMENT</a>
-                            <a href="#">SPORTS</a>
-                            <a href="#">DIALOGUE</a>
+                            {{ local }}
+                            {{ set_current_issue }}
+                            {{ list_sections }}
+                            <a  href="{{ uri options="section" }}">{{ $gimme->section->name}}</a>
+                            {{ /list_sections }}
+                            {{ /local }}
                         </nav>
                     </div>
 
