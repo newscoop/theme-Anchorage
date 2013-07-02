@@ -36,7 +36,7 @@
     <![endif]-->
     
     <!-- RSS & Pingback -->
-    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="">
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://{{ $gimme->publication->site }}/en/static/rss/">
     
     <link rel="shortcut icon" href="">
     <link rel="apple-touch-icon" href="">
@@ -97,7 +97,4 @@
 
         });
     </script>
-
-
-
 </head>
