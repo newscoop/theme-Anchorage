@@ -6,16 +6,30 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title></title>
+    <title>{{ if $gimme->article->defined }}{{ $gimme->article->name }} | {{ elseif $gimme->section->defined }}{{ $gimme->section->name }} | {{ /if }}{{ $gimme->publication->name }}</title>
     <meta name="viewport" content="width=device-width">
-    <meta name="description" content="">
-    
-    <meta name="keywords" content="" />
-    
+    {{ if empty($siteinfo) }}{{ $siteinfo=['description' => '', 'keywords' => ''] }}{{ /if }}
+    {{* if an article is active, meta-description of web page will be article's intro, otherwise it will pull site's description from System Preferences (/Configure/System Preferences) *}}
+    <meta name="description" content="{{ if $gimme->article->defined }}{{ $gimme->article->deck|strip_tags:false|strip|escape:'html':'utf-8' }}{{ else }}{{ $siteinfo.description }}{{ /if }}">
+
+    {{* if an article is active, meta-keywords will be generated of article keywords (defined on article edit screen), otherwise it will use site-wide keywords from System Preferences (/Configure/System Preferences) *}}
+    <meta name="keywords" content="{{ if $gimme->article->defined }}{{ $gimme->article->keywords }}{{ else }}{{$siteinfo.keywords}}{{ /if }}" />
+
     <link rel="stylesheet" href="{{ url static_file="_css/bootstrap.min.css" }}">
     <link rel="stylesheet" href="{{ url static_file="_css/anchorage.skin.css" }}">
     <link rel="stylesheet" href="{{ url static_file="_css/anchorage.responsive.css" }}">
     <link rel="stylesheet" href="{{ url static_file="_css/font-awesome.min.css" }}">
+
+    {{ if $gimme->article->defined }}{{* Open Graph protocol metatags for Facebook sharing *}}
+    <meta property="og:title" content="{{$gimme->article->name|html_entity_decode|regex_replace:'/&(.*?)quo;/':'&quot;'}}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://{{ $gimme->publication->site }}{{ uri }}" />
+    <meta property="og:site_name" content="{{ $gimme->publication->name }}" />
+    <meta property="og:description" content="{{$gimme->article->deck|strip_tags:false|strip|escape:'html':'utf-8' }}" />
+    {{ list_article_images }}
+    <meta property="og:image" content="{{ $gimme->article->image->imageurl }}" />
+    {{ /list_article_images }}
+    {{ /if }}
     
     <!--[if lte IE 9]>
        <link rel="stylesheet" href="">
