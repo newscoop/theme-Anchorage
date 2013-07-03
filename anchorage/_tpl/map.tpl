@@ -1,6 +1,29 @@
                                 <aside id="map">
                                     <h4 class="section-title">News Map</h4>
                                     <div>
-                                        <iframe width="97%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=-86.3258,12.0851,-86.2032,12.1946&amp;layer=mapnik" style="border: 1px solid #fff"></iframe><br />
+										{{* All possible constraints for setting the map can seen here:
+										https://wiki.sourcefabric.org/display/CS/Dynamic+maps+-+Constraints *}}
+										{{ set_map
+										    label="{{ #latestLocations# }}"
+										    issues="_current"
+										    max_points=5
+										}}
+
+										{{* Options for displaying the map are described here:
+										https://wiki.sourcefabric.org/display/CS/Dynamic+maps+-+Display *}}
+										{{ map
+										    show_locations_list=false
+										    show_reset_link=true
+										    area_show="focus"
+										    width="100%"
+										    height="300"
+										    show_open_link=true
+										    open_map_on_click=false
+										    popup_width="1000"
+										    popup_height="750"
+										    max_zoom=15
+										    map_margin=20
+										    area_show="focus"
+										}}
                                     </div>
                                 </aside>

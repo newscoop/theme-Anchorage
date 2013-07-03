@@ -194,8 +194,8 @@ figure{
 }
 
 .extra-articles{
-    display: inline-block;
     width: 48%;
+    min-height: 180px;
     h4{
         margin-top: 15px;
     }
@@ -210,10 +210,18 @@ figure{
     margin-right: 18px;
     .box-shadow(1px,0px,0px,0px,#d8d8d8);
     border-right:#fff 1px solid;
+    float: left;
+}
+
+.right-block{
+    float: right;
 }
 
 #map{
     margin-top:25px;
+    .geomap_menu,.geomap_open_large_map{
+        display: none;
+    }
 }
 
 #videos{

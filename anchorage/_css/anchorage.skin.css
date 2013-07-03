@@ -191,8 +191,8 @@ figure figcaption {
   margin-top: 5px;
 }
 .extra-articles {
-  display: inline-block;
   width: 48%;
+  min-height: 180px;
 }
 .extra-articles h4 {
   margin-top: 15px;
@@ -208,9 +208,17 @@ figure figcaption {
   -moz-box-shadow: 1px 0px 0px 0px #d8d8d8;
   box-shadow: 1px 0px 0px 0px #d8d8d8;
   border-right: #fff 1px solid;
+  float: left;
+}
+.right-block {
+  float: right;
 }
 #map {
   margin-top: 25px;
+}
+#map .geomap_menu,
+#map .geomap_open_large_map {
+  display: none;
 }
 #videos {
   margin-bottom: 15px;
@@ -916,6 +924,21 @@ hr {
   padding: 0px 5px;
   margin-right: 10px;
   margin-bottom: 10px;
+}
+#map #geo_show_label_inline {
+  font-size: 12px;
+  margin: 0;
+  line-height: 20px;
+}
+#map .article_backlinks ul {
+  list-style-image: url('../_img/map-list.png');
+}
+#map .article_backlinks ul li {
+  line-height: 15px;
+}
+#map .article_backlinks ul li a {
+  color: #bc0000;
+  font-size: 11px;
 }
 #videos .video .video-caption {
   text-align: center;

@@ -1,119 +1,16 @@
-                                <aside class="extra-articles left-block">
-                                    <h4 class="section-title"><a href=""><b>Articles in Sport</b></a></h4>
+                                {{assign var="counter" value=0 }}
+                                {{ list_sections length="6"  }}
+                                {{ assign var="counter" value=$counter+1 }}
+                                <aside class="extra-articles {{if $counter is odd}}left-block{{else}}right-block{{/if}}">
+                                    <h4 class="section-title"><a href="{{ uri options="section" }}"><b>{{ $gimme->section->name }}</b></a></h4>
+                                    {{ list_articles length="3" ignore_issue="true" order="bypublishdate desc" }}
                                     <div class="link">
                                         <i class="icon-double-angle-right"></i>
-                                        <a class="dateline" href="#">Euismod: </a>
-                                        <a href="#"> Aenean lacinia bibendum nulla sed consectetur.</a>
+                                        <a class="dateline" href="#">Dateline pending: </a>
+                                        <a href="{{ uri options="article" }}"> {{ $gimme->article->name }}</a>
                                     </div>
-                                    <div class="link">
-                                        <i class="icon-double-angle-right"></i>
-                                        <a class="dateline" href="#">Ullamcorper cras nibh: </a>
-                                        <a href="#"> Nullam id dolor id nibh ultricies vehicula ut id elit</a>
-                                    </div>
-                                    <div class="link">
-                                        <i class="icon-double-angle-right"></i>
-                                        <a class="dateline" href="#">Sit Condimentum: </a>
-                                        <a href="#"> Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</a>
-                                    </div>
-                                    <a href="#" class="solid-button pull-right">More</a>        
+                                    {{ /list_articles }}
+                                    <a href="{{ uri options="section" }}" class="solid-button pull-right">More</a>        
                                 </aside>
-
-                                <aside class="extra-articles">
-                                    <h4 class="section-title"><a href=""><b>Articles in Health</b></a> </h4>
-                                    <div class="link">
-                                        <i class="icon-double-angle-right"></i>
-                                        <a class="dateline" href="#">Euismod: </a>
-                                        <a href="#"> Aenean lacinia bibendum nulla sed consectetur.</a>
-                                    </div>
-                                    <div class="link">
-                                        <i class="icon-double-angle-right"></i>
-                                        <a class="dateline" href="#">Ullamcorper cras nibh: </a>
-                                        <a href="#"> Nullam id dolor id nibh ultricies vehicula ut id elit</a>
-                                    </div>
-                                    <div class="link">
-                                        <i class="icon-double-angle-right"></i>
-                                        <a class="dateline" href="#">Sit Condimentum: </a>
-                                        <a href="#"> Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</a>
-                                    </div> 
-                                    <a href="#" class="solid-button pull-right">More</a> 
-                                </aside>
-
-                                <aside class="extra-articles left-block">
-                                    <h4 class="section-title"><a href=""><b>Articles in Sci/Tech</b></a>  </h4>
-                                    <div class="link">
-                                        <i class="icon-double-angle-right"></i>
-                                        <a class="dateline" href="#">Euismod: </a>
-                                        <a href="#"> Aenean lacinia bibendum nulla sed consectetur.</a>
-                                    </div>
-                                    <div class="link">
-                                        <i class="icon-double-angle-right"></i>
-                                        <a class="dateline" href="#">Ullamcorper cras nibh: </a>
-                                        <a href="#"> Nullam id dolor id nibh ultricies vehicula ut id elit</a>
-                                    </div>
-                                    <div class="link">
-                                        <i class="icon-double-angle-right"></i>
-                                        <a class="dateline" href="#">Sit Condimentum: </a>
-                                        <a href="#"> Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</a>
-                                    </div> 
-                                    <a href="#" class="solid-button pull-right">More</a> 
-                                </aside>
-
-                                <aside class="extra-articles">
-                                    <h4 class="section-title"><a href=""><b>Articles in Entertaiment</b></a> </h4>
-                                    <div class="link">
-                                        <i class="icon-double-angle-right"></i>
-                                        <a class="dateline" href="#">Euismod: </a>
-                                        <a href="#"> Aenean lacinia bibendum nulla sed consectetur.</a>
-                                    </div>
-                                    <div class="link">
-                                        <i class="icon-double-angle-right"></i>
-                                        <a class="dateline" href="#">Ullamcorper cras nibh: </a>
-                                        <a href="#"> Nullam id dolor id nibh ultricies vehicula ut id elit</a>
-                                    </div>
-                                    <div class="link">
-                                        <i class="icon-double-angle-right"></i>
-                                        <a class="dateline" href="#">Sit Condimentum: </a>
-                                        <a href="#"> Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</a>
-                                    </div>
-                                    <a href="#" class="solid-button pull-right">More</a>  
-                                </aside>
-
-                                <aside class="extra-articles left-block">
-                                    <h4 class="section-title"><a href=""><b>Articles in Businesss</b></a> </h4>
-                                    <div class="link">
-                                        <i class="icon-double-angle-right"></i>
-                                        <a class="dateline" href="#">Euismod: </a>
-                                        <a href="#"> Aenean lacinia bibendum nulla sed consectetur.</a>
-                                    </div>
-                                    <div class="link">
-                                        <i class="icon-double-angle-right"></i>
-                                        <a class="dateline" href="#">Ullamcorper cras nibh: </a>
-                                        <a href="#"> Nullam id dolor id nibh ultricies vehicula ut id elit</a>
-                                    </div>
-                                    <div class="link">
-                                        <i class="icon-double-angle-right"></i>
-                                        <a class="dateline" href="#">Sit Condimentum: </a>
-                                        <a href="#"> Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</a>
-                                    </div>
-                                    <a href="#" class="solid-button pull-right">More</a>  
-                                </aside>
-
-                                <aside class="extra-articles ">
-                                    <h4 class="section-title"><a href=""><b>Articles in Politics</b></a></h4>
-                                    <div class="link">
-                                        <i class="icon-double-angle-right"></i>
-                                        <a class="dateline" href="#">Euismod: </a>
-                                        <a href="#"> Aenean lacinia bibendum nulla sed consectetur.</a>
-                                    </div>
-                                    <div class="link">
-                                        <i class="icon-double-angle-right"></i>
-                                        <a class="dateline" href="#">Ullamcorper cras nibh: </a>
-                                        <a href="#"> Nullam id dolor id nibh ultricies vehicula ut id elit</a>
-                                    </div>
-                                    <div class="link">
-                                        <i class="icon-double-angle-right"></i>
-                                        <a class="dateline" href="#">Sit Condimentum: </a>
-                                        <a href="#"> Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</a>
-                                    </div>
-                                    <a href="#" class="solid-button pull-right">More</a>  
-                                </aside>
+                                {{ /list_sections }}
+                                <div class="clearfix"></div>

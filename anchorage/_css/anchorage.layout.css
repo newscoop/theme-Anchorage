@@ -190,8 +190,8 @@ figure figcaption {
   margin-top: 5px;
 }
 .extra-articles {
-  display: inline-block;
   width: 48%;
+  min-height: 180px;
 }
 .extra-articles h4 {
   margin-top: 15px;
@@ -207,9 +207,17 @@ figure figcaption {
   -moz-box-shadow: 1px 0px 0px 0px #d8d8d8;
   box-shadow: 1px 0px 0px 0px #d8d8d8;
   border-right: #fff 1px solid;
+  float: left;
+}
+.right-block {
+  float: right;
 }
 #map {
   margin-top: 25px;
+}
+#map .geomap_menu,
+#map .geomap_open_large_map {
+  display: none;
 }
 #videos {
   margin-bottom: 15px;
