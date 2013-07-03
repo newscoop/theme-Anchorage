@@ -32,7 +32,7 @@
 
                                 {{ foreach $users as $user }}
                                 <div class="user-list">
-                                    <_img src="{{ url static_file="_img/avatar-list.png" }}" class="avatar">
+                                    <img src="{{ url static_file="_img/avatar-list.png" }}" class="avatar">
                                     <a class="user-title" href="{{ $view->url(['username' => $user->uname], 'user') }}">{{ $user->first_name }} {{ $user->last_name }}</a>
                                     <span class="member" href="">{{ #memberSince# }} <time class="timeago" datetime="{{ $user->created|date_format:'%Y-%m-%d' }} 06:00:00">{{ $user->created|date_format:"%Y-%m-%d" }} 06:00:00</time></span>
                                 </div>
