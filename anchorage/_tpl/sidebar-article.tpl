@@ -3,26 +3,17 @@
                                 <section id="most-read" class="block">
                                     <h4>Most Read</h4>
 
+                                    {{ local }} 
+                                    {{ set_current_issue }} 
+                                    {{ list_articles length="3" order="bypopularity desc" constraints="type is news" }}
                                     <div class="most-read-articles">
-                                      <a href="#" class="most-read-title">Vestibulum id ligula porta felis euismod semper</a>
+                                      <a href="{{ uri options="article" }}" class="most-read-title">{{ $gimme->article->name }}</a>
                                       <div class="most-read-description">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis
+                                        {{ $gimme->article->full_text|truncate:140:"...":true }}
                                       </div>
                                     </div>
-
-                                    <div class="most-read-articles">
-                                      <a href="#" class="most-read-title">Nulla vitae elit libero, a pharetra augue.</a>
-                                      <div class="most-read-description">
-                                        Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nulla vitae elit libero, a pharetra augue. 
-                                      </div>
-                                    </div>
-
-                                    <div class="most-read-articles">
-                                      <a href="#" class="most-read-title">Donec id elit non mi porta gravida at eget metus porta gravida at eget metus.</a>
-                                      <div class="most-read-description">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.
-                                      </div>
-                                    </div>
+                                    {{ /list_articles }} 
+                                    {{ /local }}
 
                                 </section>
 

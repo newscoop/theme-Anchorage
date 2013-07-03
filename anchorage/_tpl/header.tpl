@@ -42,7 +42,10 @@
                             {{ local }}
                             {{ set_current_issue }}
                             {{ list_sections }}
-                            <a  href="{{ uri options="section" }}">{{ $gimme->section->name}}</a>
+                            {{if $currentsection == $gimme->section->number }}class="active"{{ /if}}
+                            <a href="{{ uri options='section' }}" 
+                                {{if $currentsection == $gimme->section->number }}class="active"{{ /if}}>{{ $gimme->section->name}}
+                            </a>
                             {{ /list_sections }}
                             {{ /local }}
                         </nav>

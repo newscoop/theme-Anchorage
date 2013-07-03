@@ -18,7 +18,7 @@
                                 <article class="articles articles-list">
                                     <figure class="section-thumb pull-left">
                                         <a href="{{ uri options="article" }}">
-                                             <img src="http://lorempixel.com/325/190/business">
+                                            {{ include file='_tpl/img/img_325x190.tpl'}}
                                         </a>
                                     </figure>
                                     <header class="pull-right">
