@@ -1,3 +1,4 @@
+{{ config_load file="{{ $gimme->language->english_name }}.conf" }}
 {{ include "_tpl/_html-head.tpl" }}
 
 <body>
@@ -13,82 +14,26 @@
                     <div class="row columns">
                         <div class="span8 column">
                             <div id="main-content" class="single-page section-page">
-
+                                {{ list_articles length="5" ignore_issue="true" constraints="type not poll" }}
                                 <article class="articles articles-list">
                                     <figure class="section-thumb pull-left">
-                                        <a href="">
+                                        <a href="{{ uri options="article" }}">
                                              <img src="http://lorempixel.com/325/190/business">
                                         </a>
                                     </figure>
                                     <header class="pull-right">
-                                        <h2><a href="">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</a></h2>
+                                        <h2><a href="{{ uri options="article" }}">{{ $gimme->article->name }}</a></h2>
                                     </header>
                                     <div class="excerpt pull-right">
-                                        Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus.Vestibulum id ligula porta felis euismod semper.
+                                         {{ $gimme->article->full_text|truncate:250:"...":true }}
                                     </div>
                                     <div class="article-links pull-right">
-                                        <a href="#" class="btn btn-mini articles-button read-more"><i class="icon-double-angle-right"></i> Read More</a>
-                                        <a href="#" class="btn btn-mini articles-button comment-link"><i class="icon-double-angle-right"></i> Comments(43)</a>
+                                        <a href="{{ uri options="article" }}" class="btn btn-mini articles-button read-more"><i class="icon-double-angle-right"></i> {{ #readMore# }}</a>
+                                        <a href="{{ uri options="article" }}#comments" class="btn btn-mini articles-button comment-link"><i class="icon-double-angle-right"></i> {{ #comments# }}({{ $gimme->article->comment_count }})</a>
                                     </div>
                                     <div class="clearfix"></div>
                                 </article>
-
-                                <article class="articles articles-list">
-                                    <figure class="section-thumb pull-left">
-                                        <a href="">
-                                             <img src="http://lorempixel.com/325/190/sports">
-                                        </a>
-                                    </figure>
-                                    <header class="pull-right">
-                                        <h2><a href="">Maecenas faucibus mollis interdum.</a></h2>
-                                    </header>
-                                    <div class="excerpt pull-right">
-                                        Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus.Vestibulum id ligula porta felis euismod semper.
-                                    </div>
-                                    <div class="article-links pull-right">
-                                        <a href="#" class="btn btn-mini articles-button read-more"><i class="icon-double-angle-right"></i> Read More</a>
-                                        <a href="#" class="btn btn-mini articles-button comment-link"><i class="icon-double-angle-right"></i> Comments(43)</a>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </article>
-
-                                <article class="articles articles-list">
-                                    <figure class="section-thumb pull-left">
-                                        <a href="">
-                                             <img src="http://lorempixel.com/325/190/">
-                                        </a>
-                                    </figure>
-                                    <header class="pull-right">
-                                        <h2><a href="">Vestibulum id ligula porta felis euismod semper. Nullam id dolor id nibh ultricies vehicula ut id elit..</a></h2>
-                                    </header>
-                                    <div class="excerpt pull-right">
-                                        Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus.Vestibulum id ligula porta felis euismod semper.
-                                    </div>
-                                    <div class="article-links pull-right">
-                                        <a href="#" class="btn btn-mini articles-button read-more"><i class="icon-double-angle-right"></i> Read More</a>
-                                        <a href="#" class="btn btn-mini articles-button comment-link"><i class="icon-double-angle-right"></i> Comments(43)</a>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </article>
-
-                                <article class="articles articles-list">
-                                    <figure class="section-thumb pull-left">
-                                        <a href="">
-                                             <img src="http://lorempixel.com/325/190/people">
-                                        </a>
-                                    </figure>
-                                    <header class="pull-right">
-                                        <h2><a href="">Curabitur blandit tempus porttitor.</a></h2>
-                                    </header>
-                                    <div class="excerpt pull-right">
-                                        Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus.Vestibulum id ligula porta felis euismod semper.
-                                    </div>
-                                    <div class="article-links pull-right">
-                                        <a href="#" class="btn btn-mini articles-button read-more"><i class="icon-double-angle-right"></i> Read More</a>
-                                        <a href="#" class="btn btn-mini articles-button comment-link"><i class="icon-double-angle-right"></i> Comments(43)</a>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </article>
+                                {{ /list_articles }}
 
                                 <aside class="extra-articles">
                                     <h4 class="section-title"><a href=""><b>MORE ARTICLES IN THIS SECTION</b></a></h4>
@@ -109,7 +54,7 @@
                                     </div>       
                                 </aside>
 
-                                <img class="ad section-ad" src="{{ url static_file="_img/sourcefabric-ad2.png" }}"">
+                                <img class="ad section-ad" src="{{ url static_file="_img/sourcefabric-ad2.png" }}">
 
                             </div>
                         </div>
