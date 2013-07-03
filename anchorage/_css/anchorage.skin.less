@@ -11,7 +11,7 @@
 
 body{
 	font-family: 'Ubuntu', sans-serif;
-	background: url(../img/background.jpg) fixed;
+	background: url(../_img/background.jpg) fixed;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -170,7 +170,7 @@ hr{
     .header-top{
     	background: @main-color;
         .top-block-left{
-            background: url(../img/grey_background.jpg);
+            background: url(../_img/grey_background.jpg);
             margin-left:20px;
         }
         .top-block-right{
@@ -264,6 +264,7 @@ hr{
         a{
             color:#181818;
             .trans(all, 0.3s);
+            text-transform: uppercase;
             &:hover{
             	color:#fff;
             	background: @dark-color;
@@ -284,7 +285,7 @@ hr{
 /* --- Begin Content Elements */
 
 #main{
-	background: #f2f2f2 url(../img/main-background.png) repeat-x top center;
+	background: #f2f2f2 url(../_img/main-background.png) repeat-x top center;
 	border-top: #fff 1px solid;
 	border-bottom: #fff 1px solid;
 }
@@ -430,7 +431,7 @@ hr{
     	padding-bottom:15px;
     }
     #extra{
-    	background: url(../img/grey_background.jpg) fixed;
+    	background: url(../_img/grey_background.jpg) fixed;
     	height: 1565px; // valor temporal
     }
 
@@ -459,7 +460,7 @@ hr{
 
     #articles-slider{
         .caption{
-            background: url(../img/caption-slider.png);
+            background: url(../_img/caption-slider.png);
             margin-top:-30px;
             position: relative;
             z-index: 100;
@@ -551,16 +552,17 @@ hr{
 #footer{
 	margin-top:5px;
 	.footer-area{
-		background: @main-color + 15 url(../img/footer-background.png) fixed;
+		background: @main-color + 15 url(../_img/footer-background.png) fixed;
 
 	}
     .footer-widgets{
     	height: 280px;
-    	background: url(../img/footer-planet.png) no-repeat center bottom;
+    	background: url(../_img/footer-planet.png) no-repeat center bottom;
         > .block{
             margin-top:30px;
             a{
                 color:#fff;
+                text-transform: uppercase;
             }
         }
     }

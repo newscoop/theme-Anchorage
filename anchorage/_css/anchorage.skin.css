@@ -540,7 +540,7 @@ h1.page-title {
 /* --- Begin General Elements */
 body {
   font-family: 'Ubuntu', sans-serif;
-  background: url(../img/background.jpg) fixed;
+  background: url(../_img/background.jpg) fixed;
 }
 /* End General Elements --- */
 /* --- Begin Skin Variables and Custom Style Classes */
@@ -731,7 +731,7 @@ hr {
   background: #bc0000;
 }
 #header .header-top .top-block-left {
-  background: url(../img/grey_background.jpg);
+  background: url(../_img/grey_background.jpg);
   margin-left: 20px;
 }
 #header .header-top .top-block-right {
@@ -852,6 +852,7 @@ hr {
   -moz-transition: all 0.3s;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
+  text-transform: uppercase;
 }
 #header #main-menu a:hover {
   color: #fff;
@@ -871,7 +872,7 @@ hr {
 /* End Header Styles --- */
 /* --- Begin Content Elements */
 #main {
-  background: #f2f2f2 url(../img/main-background.png) repeat-x top center;
+  background: #f2f2f2 url(../_img/main-background.png) repeat-x top center;
   border-top: #fff 1px solid;
   border-bottom: #fff 1px solid;
 }
@@ -995,7 +996,7 @@ hr {
   padding-bottom: 15px;
 }
 #sidebar #extra {
-  background: url(../img/grey_background.jpg) fixed;
+  background: url(../_img/grey_background.jpg) fixed;
   height: 1565px;
 }
 #sidebar #most-read .most-read-articles .most-read-title {
@@ -1016,7 +1017,7 @@ hr {
   font-size: 12px;
 }
 #sidebar #articles-slider .caption {
-  background: url(../img/caption-slider.png);
+  background: url(../_img/caption-slider.png);
   margin-top: -30px;
   position: relative;
   z-index: 100;
@@ -1144,17 +1145,18 @@ hr {
   margin-top: 5px;
 }
 #footer .footer-area {
-  background: #cb0f0f url(../img/footer-background.png) fixed;
+  background: #cb0f0f url(../_img/footer-background.png) fixed;
 }
 #footer .footer-widgets {
   height: 280px;
-  background: url(../img/footer-planet.png) no-repeat center bottom;
+  background: url(../_img/footer-planet.png) no-repeat center bottom;
 }
 #footer .footer-widgets > .block {
   margin-top: 30px;
 }
 #footer .footer-widgets > .block a {
   color: #fff;
+  text-transform: uppercase;
 }
 #footer .bottom-footer {
   background: #353334;
