@@ -1,3 +1,4 @@
+{{ config_load file="{{ $gimme->language->english_name }}.conf" }}
 {{ include "_tpl/_html-head.tpl" }}
 
 <body>
@@ -14,32 +15,14 @@
                         <div class="span8 column">
                             <div id="main-content" class="single-page archive-page">
 
-                                <h1 class="page-title">Issues Archive</h1>
-
+                                <h1 class="page-title">{{ #issuesArchive# }}</h1>
+                                {{ list_issues order="bynumber desc" constraints="number greater 1" }} 
                                 <div class="archive-list">
                                     <div class="archive-border"></div>
-                                    <a class="archive-title" href="">January 2013</a>
-                                    <span class="published-date" href="">Published on 01 January 2013</span>
+                                    <a class="archive-title" href="{{ uri options="template issue.tpl" }}">{{ $gimme->issue->name }}</a>
+                                    <span class="published-date" href="">{{ #publishedOn# }} <time datetime="{{ $gimme->issue->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->issue->publish_date|camp_date_format:"%d %M %Y" }}</time></span>
                                 </div>
-
-                                <div class="archive-list">
-                                    <div class="archive-border"></div>
-                                    <a class="archive-title" href="">December 2010</a>
-                                    <span class="published-date" href="">Published on 01 January 2013</span>
-                                </div>
-
-                                <div class="archive-list">
-                                    <div class="archive-border"></div>
-                                    <a class="archive-title" href="">November 2010</a>
-                                    <span class="published-date" href="">Published on 01 January 2013</span>
-                                </div>
-
-                                <div class="archive-list">
-                                    <div class="archive-border"></div>
-                                    <a class="archive-title" href="">October 2010</a>
-                                    <span class="published-date" href="">Published on 01 January 2013</span>
-                                </div>
-
+                                {{ /list_issues }}  
                             </div>
                         </div>
                         <!-- Begins Sidebar -->
