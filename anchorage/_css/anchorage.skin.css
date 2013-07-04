@@ -980,11 +980,12 @@ hr {
 #sidebar {
   border-right: #fff 1px solid;
 }
-#sidebar #graph {
-  margin-bottom: 20px;
-}
 #sidebar #graph h4 {
   color: #bc0000;
+}
+#sidebar #graph .gadget a[target="_top"],
+#sidebar #graph .gadget .powered {
+  display: none;
 }
 #sidebar #login-form {
   background: #bc0000;
