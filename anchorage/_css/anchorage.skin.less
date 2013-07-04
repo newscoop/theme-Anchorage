@@ -265,7 +265,7 @@ hr{
             color:#181818;
             .trans(all, 0.3s);
             text-transform: uppercase;
-            &:hover{
+            &:hover,{
             	color:#fff;
             	background: @dark-color;
             	text-decoration: none;
@@ -275,6 +275,16 @@ hr{
             	z-index: 10;
             	position: relative;
             }
+        }
+        a.active{
+                color:#fff;
+                background: @dark-color;
+                text-decoration: none;
+                border-bottom: #fff 1px solid;
+                .box-shadow(0px,6px,0px,0px,@main-color);
+                .trans(all, 0.3s);
+                z-index: 10;
+                position: relative;
         }
     }
 }

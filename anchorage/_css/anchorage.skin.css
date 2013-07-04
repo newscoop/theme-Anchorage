@@ -877,6 +877,21 @@ hr {
   z-index: 10;
   position: relative;
 }
+#header #main-menu a.active {
+  color: #fff;
+  background: #585657;
+  text-decoration: none;
+  border-bottom: #fff 1px solid;
+  -webkit-box-shadow: 0px 6px 0px 0px #bc0000;
+  -moz-box-shadow: 0px 6px 0px 0px #bc0000;
+  box-shadow: 0px 6px 0px 0px #bc0000;
+  transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  z-index: 10;
+  position: relative;
+}
 /* End Header Styles --- */
 /* --- Begin Content Elements */
 #main {
