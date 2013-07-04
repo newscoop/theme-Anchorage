@@ -1,3 +1,4 @@
+        {{ assign var="currentsection" value=$gimme->section->number }}
         <!-- Begins Header -->
         <header id="header" role="banner">
 
@@ -42,9 +43,8 @@
                             {{ local }}
                             {{ set_current_issue }}
                             {{ list_sections }}
-                            {{if $currentsection == $gimme->section->number }}class="active"{{ /if}}
                             <a href="{{ uri options='section' }}" 
-                                {{if $currentsection == $gimme->section->number }}class="active"{{ /if}}>{{ $gimme->section->name}}
+                                {{if $currentsection == $gimme->section->number }}class="active"{{ /if}} >{{ $gimme->section->name}}
                             </a>
                             {{ /list_sections }}
                             {{ /local }}
