@@ -1,5 +1,5 @@
 {{ config_load file="{{ $gimme->language->english_name }}.conf" }}
-{{ include "_tpl/_html-head.tpl" }}
+{{ include file="_tpl/_html-head.tpl" }}
 
 <body>
     <!-- Begins Main Container -->
@@ -32,7 +32,13 @@
 
                                 {{ foreach $users as $user }}
                                 <div class="user-list">
-                                    <img src="{{ url static_file="_img/avatar-list.png" }}" class="avatar">
+                                    {{ if !$user->is_active }}
+                                    <img src="{{ url static_file="_img/avatar-list.png" }}" class="avatar" />
+                                    {{ else if $user->image() }}
+                                    <img src="{{ $user->image(32, 37) }}" class="avatar" />
+                                    {{ else }}
+                                    <img src="{{ url static_file="_img/avatar-list.png" }}" class="avatar" />
+                                    {{ /if }}
                                     <a class="user-title" href="{{ $view->url(['username' => $user->uname], 'user') }}">{{ $user->first_name }} {{ $user->last_name }}</a>
                                     <span class="member" href="">{{ #memberSince# }} <time class="timeago" datetime="{{ $user->created|date_format:'%Y-%m-%d' }} 06:00:00">{{ $user->created|date_format:"%Y-%m-%d" }} 06:00:00</time></span>
                                 </div>
@@ -43,7 +49,7 @@
                         <!-- Begins Sidebar -->
                         <aside id="sidebar-container" class="span4 column">
 
-                            {{ include "_tpl/sidebar-community.tpl" }}
+                            {{ include file="_tpl/sidebar-community.tpl" }}
                             
                         </aside>
                         <!-- / End Sidebar -->
@@ -54,6 +60,6 @@
         </section> 
         <!-- / End main content -->
 
-{{ include "_tpl/footer.tpl" }}
+{{ include file="_tpl/footer.tpl" }}
 
-{{ include "_tpl/_html-footer.tpl" }}
+{{ include file="_tpl/_html-footer.tpl" }}
