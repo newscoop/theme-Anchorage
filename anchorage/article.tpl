@@ -15,26 +15,12 @@
                         <div class="span8 column">
                             <div id="main-content" class="single-page">
 
-                                <h1 class="page-title">Vestibulum id ligula porta felis euismod semperVestibulum id ligula porta felis euismod semper.</h1>
+                                {{ if $gimme->article->type_name == "debate" }}
+                                {{ include file="_tpl/article-debate.tpl" }}
+                                {{ else }}
+                                {{ include file="_tpl/article-cont.tpl" }}
+                                {{ /if }}
 
-                                <figure class="image">
-                                    <a href="">
-                                        <img src="http://lorempixel.com/325/190/business">
-                                    </a>
-                                    <figcaption>Boat in Copenhagen canals</figcaption>
-                                </figure>
-
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper.</p>
-
-                                <p>Etiam porta sem malesuada magna mollis euismod. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Curabitur blandit tempus porttitor.</p>
-
-                                <p>Sed posuere consectetur est at lobortis. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-
-                                <p>Etiam porta sem malesuada magna mollis euismod. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Curabitur blandit tempus porttitor.</p>
-
-                                <p>Sed posuere consectetur est at lobortis. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-
-                                {{ include "_tpl/comments.tpl" }}
 
                             </div>
                         </div>

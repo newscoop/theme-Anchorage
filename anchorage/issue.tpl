@@ -15,7 +15,7 @@
                         <div class="span8 column">
                             <div id="main-content" class="single-page issues-page">
 
-                                <a href="#" class="link-color">&larr; {{ #back# }}</a>
+                                <a href="javascript:history.back()" class="link-color">&larr; {{ #back# }}</a>
                                 <h1 class="page-title">{{ #issuesArchive# }} &rarr; {{ $gimme->issue->name }}</h1>
                                 {{ list_sections }}  
                                 {{ list_articles }}
