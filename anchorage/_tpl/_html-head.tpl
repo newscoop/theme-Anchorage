@@ -55,6 +55,7 @@
     <!-- Vendor plugins -->
     <script src="{{ url static_file="_js/vendor/jquery.zweatherfeed.min.js" }}"></script>
     <script src="{{ url static_file="_js/vendor/jQuery.equalHeights.js" }}"></script>
+    <script src="{{ url static_file="_js/vendor/jquery.ba-resize.min.js" }}"></script>
     <script src="{{ url static_file="_js/bootstrap.min.js" }}"></script>
     
     <script type="text/javascript">
@@ -83,14 +84,11 @@
             $('.columns').equalHeights();
             $('.comment').equalHeights();
             $('#comment-form').equalHeights();
-
-            // Mejorar esto
-            //var alto = $('#sidebar').height() - ($('#graph').height() + $('#login-form').height() + $('#premium-block').height() + $('#premium-block-description').height());
-            //$('#extra').height(alto-85);
-            
-            //var sidebar = $('#sidebar-container').height();
-            //var extra = $('#extra').height()
-            //$('#extra').height(sidebar-extra-100);
+            $('#sidebar').height($('#sidebar-container').height());
+            $("#main-content,#sidebar").resize(function(e){
+                $('.columns').equalHeights();
+                $('#sidebar').height($('#sidebar-container').height());
+            });
 
             //solo para article
             $('.carousel').carousel();

@@ -238,7 +238,6 @@ figure figcaption {
   -webkit-box-shadow: -1px 0px 0px 0px #ffffff;
   -moz-box-shadow: -1px 0px 0px 0px #ffffff;
   box-shadow: -1px 0px 0px 0px #ffffff;
-  height: 100%;
 }
 #sidebar > .block {
   padding: 5px 15px 5px 15px;

@@ -8,6 +8,13 @@
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
 
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.columns').equalHeights();
+
+        });
+    </script>
+
     </div>
     <!-- / Ends Main Container -->
 

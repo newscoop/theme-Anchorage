@@ -405,9 +405,11 @@ hr{
 /* --- Begin Sidebar */
 
 #sidebar{
-    border-right:#fff 1px solid;
-
+    border-right:#fff 1px solid; 
+    background: url(../_img/grey_background.jpg) fixed;
     #graph{
+        background: #f2f2f2 url(../_img/main-background.png) repeat-x top center;
+        margin-top:0px;
     	h4{
     		color:@main-color;
     	}
@@ -463,12 +465,10 @@ hr{
     	font-size: 12px;
     	padding-bottom:15px;
     }
-    #extra{
-    	background: url(../_img/grey_background.jpg) fixed;
-    	height: 1565px; // valor temporal
-    }
 
     #most-read{
+        background: #f2f2f2 url(../_img/main-background.png) repeat-x top center;
+        margin-top:0px;
         .most-read-articles{
             .most-read-title{
                 color:#000;
@@ -561,7 +561,8 @@ hr{
 
     // Weather external widget
     .weatherFeed {
-        background: @dark-color - 40; 
+        background: @dark-color - 40;
+        margin-bottom: 20px; 
     }
     .weatherTemp,.weatherCountry,.weatherCity{
     	color:@main-color;
