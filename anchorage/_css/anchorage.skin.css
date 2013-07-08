@@ -59,14 +59,14 @@ figure figcaption {
 #header .form-search .search-query {
   height: 15px;
   margin-top: 5px;
-  width: 80px;
+  width: 155px;
   transition: width 0.5s;
   -moz-transition: width 0.5s;
   -webkit-transition: width 0.5s;
   -o-transition: width 0.5s;
 }
 #header .form-search .big-search {
-  width: 150px;
+  width: 258px;
   transition: width 0.5s;
   -moz-transition: width 0.5s;
   -webkit-transition: width 0.5s;
