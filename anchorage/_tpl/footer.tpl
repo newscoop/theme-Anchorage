@@ -27,12 +27,13 @@
                 <div class="span12 bottom-footer">
                     <div class="row">
                         <div class="span4 offset4 bottom-footer">
-                            <div class="social-links pull-left">
-                                <a href="/en/static/rss"><i class="icon-rss-sign"></i> RSS News Feed</a>
-                                <a href="http://facebook.com/sourcefabric"><i class="icon-facebook-sign"></i></a>
-                                <a href="http://twitter.com/sourcefabric"><i class="icon-twitter"></i></a>
+                            <div class="social-links">
+                                <div class="btn-group">
+                                  <a href="/en/static/rss" class="btn rss-icon"><i class="icon-rss-sign"></i></a>
+                                  <a href="http://facebook.com/sourcefabric" class="btn fb-icon"><i class="icon-facebook-sign"></i></a>
+                                  <a href="http://twitter.com/sourcefabric" class="btn tw-icon"><i class="icon-twitter"></i></a>
+                                </div>
                             </div>
-                            All rights reserved
                         </div>
                     </div>
                 </div>
