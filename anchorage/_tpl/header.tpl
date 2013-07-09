@@ -11,10 +11,9 @@
                             </div>
                             <div class="span6">
                                 <div class="top-block-right">
-                                    <form class="form-search" name="form-search" action="/{{ $gimme->language->code }}/{{ $gimme->issue->url_name }}/" method="POST">
-                                        <input type="hidden" name="tpl" value="7">
-                                        <input type="search" id="searchinput" class="input-medium search-query" placeholder="Search" name="f_search_keywords">
-                                    </form>
+                                    {{ search_form template="search.tpl" submit_button="&nbsp;" html_code="class=\"form-search\" " button_html_code="style=\"display: none;\""}} 
+                                        {{ camp_edit object="search" attribute="keywords" html_code="placeholder=\"as\"" }}
+                                    {{ /search_form }}    
                                 </div>  
                             </div>
                          </div>

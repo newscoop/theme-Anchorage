@@ -62,6 +62,10 @@
                                 {{ /if }}
 
                                 {{ /list_search_results }} 
+                                
+                                {{ if $gimme->prev_list_empty }}
+                                  <p>{{ #noResultsFound# }} <strong>"{{ $gimme->search_articles_action->search_phrase }}"</strong>.</p>
+                                {{ /if }}    
 
                                 <img class="ad section-ad" src="{{ url static_file="_img/sourcefabric-ad2.png" }}">
 
