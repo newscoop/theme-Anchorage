@@ -11,8 +11,9 @@
                             </div>
                             <div class="span6">
                                 <div class="top-block-right">
-                                    <form class="form-search">
-                                      <input type="text" class="input-medium search-query" placeholder="Search">
+                                    <form id="seachform" name="form-search" action="/{{ $gimme->language->code }}/{{ $gimme->issue->url_name }}/" method="POST">
+                                        <input type="hidden" name="tpl" value="7">
+                                        <input type="search" id="searchinput" placeholder="Search" name="f_search_keywords">
                                     </form>
                                 </div>  
                             </div>
