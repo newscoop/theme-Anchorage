@@ -56,21 +56,21 @@
 
                                 <section id="articles-slider" class="carousel slide">
       
-
                                     <!-- Carousel items -->
                                     <div class="carousel-inner">
+                                      {{ list_playlist_articles name="Front page" length="3" }}
+                                      {{ if $gimme->current_list->at_beginning }}
                                       <div class="active item">
-                                        <a href="#"><img src="http://lorempixel.com/298/240/business"></a>
-                                        <a href="#" class="caption">Nulla vitae elit libero, a pharetra augue</a>
+                                        {{ include file='_tpl/img/img_298x240.tpl'}}
+                                        <a href="{{ uri option='article'}}" class="caption">{{ $gimme->article->name|truncate:50 }}</a>
                                       </div>
+                                      {{else}}
                                       <div class="item">
-                                        <a href="#"><img src="http://lorempixel.com/298/240/sports"></a>
-                                        <a href="#" class="caption">Integer posuere erat a ante venenatis dapibus </a>
+                                        {{ include file='_tpl/img/img_298x240.tpl'}}
+                                        <a href="{{ uri option='article'}}" class="caption">{{ $gimme->article->name|truncate:50 }}</a>
                                       </div>
-                                      <div class="item">
-                                        <a href="#"><img src="http://lorempixel.com/298/240/people"></a>
-                                        <a href="#" class="caption">libero, a pharetra augue</a>
-                                      </div>
+                                      {{/if}}
+                                      {{ /list_playlist_articles }}
                                     </div>
 
                                     <ol class="carousel-indicators">
@@ -88,4 +88,5 @@
                                 </section>
 
                                 <div class="clearfix"></div>
+                                
                             </div>
