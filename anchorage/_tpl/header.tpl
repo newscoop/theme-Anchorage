@@ -12,7 +12,7 @@
                             <div class="span6">
                                 <div class="top-block-right">
                                     {{ search_form template="search.tpl" submit_button="&nbsp;" html_code="class=\"form-search\" " button_html_code="style=\"display: none;\""}} 
-                                        {{ camp_edit object="search" attribute="keywords" html_code="placeholder=\"as\"" }}
+                                        {{ camp_edit object="search" attribute="keywords"  html_code="placeholder=\"as\" class=\"search-query\" " }}
                                     {{ /search_form }}    
                                 </div>  
                             </div>
