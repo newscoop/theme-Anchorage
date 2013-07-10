@@ -3,65 +3,24 @@
                                 <section id="community-feed" class="block">
                                   <h4>Community Feed</h4>
 
+                                  {{ local }}
+                                  {{ set_current_issue }}
+                                  {{ list_articles length="10" order="byLastComment desc" constraints="type is news" }}
+                                  {{ list_article_comments length="1" order="bydate desc"}}
                                   <div class="activity">
                                     <div class="activity-action">
-                                      <i class="icon-comment"></i> New comment on:
+                                      <i class="icon-comment"></i> {{ #newCommentOn# }}
                                     </div>
                                     <div class="activity-title">
-                                      <a href="#">Advertisers target online demographic</a>
+                                      <a href="{{ uri options="article" }}">{{ $gimme->article->name }}</a>
                                     </div>
                                     <div class="date">
-                                      1 year 11 days 5 h ago
+                                      <time class="timeago" datetime="{{ $gimme->comment->submit_date }}">{{ $gimme->comment->submit_date}}</time>
                                     </div>
                                   </div>
-
-                                  <div class="activity">
-                                    <div class="activity-action">
-                                      <i class="icon-comment"></i> New comment on:
-                                    </div>
-                                    <div class="activity-title">
-                                      <a href="#">Advertisers target online demographic</a>
-                                    </div>
-                                    <div class="date">
-                                      1 year 11 days 5 h ago
-                                    </div>
-                                  </div>
-
-                                  <div class="activity">
-                                    <div class="activity-action">
-                                      <i class="icon-comment"></i> New comment on:
-                                    </div>
-                                    <div class="activity-title">
-                                      <a href="#">Integer posuere erat a ante venenatis dapibus posuere velit aliquet</a>
-                                    </div>
-                                    <div class="date">
-                                      1 year 11 days 5 h ago
-                                    </div>
-                                  </div>
-
-                                  <div class="activity">
-                                    <div class="activity-action">
-                                      <i class="icon-comment"></i> New comment on:
-                                    </div>
-                                    <div class="activity-title">
-                                      <a href="#">Justo Bibendum Sit Venenatis</a>
-                                    </div>
-                                    <div class="date">
-                                      1 year 11 days 5 h ago
-                                    </div>
-                                  </div>
-
-                                  <div class="activity">
-                                    <div class="activity-action">
-                                      <i class="icon-comment"></i> New comment on:
-                                    </div>
-                                    <div class="activity-title">
-                                      <a href="#">Cum sociis natoque penatibus et magnis dis parturient montes</a>
-                                    </div>
-                                    <div class="date">
-                                      1 year 11 days 5 h ago
-                                    </div>
-                                  </div>
+                                  {{ /list_article_comments }}
+                                  {{ /list_articles }}
+                                  {{ /local }}
 
                                 </section>
 
