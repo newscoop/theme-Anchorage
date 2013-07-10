@@ -1,7 +1,7 @@
 {{ if $gimme->article->content_accessible }} 
 	<h1 class="page-title">{{ $gimme->article->name }}</h1>
 
-{{ foreach $gimme->article->slideshows as $slideshow }}
+	{{ foreach $gimme->article->slideshows as $slideshow }}
  	<div class="well">
 		{{ if $gimme->article->type_name == "news" }}
 			<div class="article-info">
@@ -32,12 +32,13 @@
   	<script>
    		Galleria.loadTheme('{{ url static_file='_js/vendor/galleria/themes/classic/galleria.classic.min.js'}}');
     	Galleria.run('#gallery');
-Galleria.configure({
-    imageCrop: true,
-});
+		Galleria.configure({
+		    imageCrop: true,
+		});
   	</script>
 
-{{foreachelse}}
+	{{foreachelse}}
+
 	<figure class="image">
 	    {{ include file="_tpl/img/img_325x190.tpl" }}
 	    <figcaption>{{ if $image->caption }}{{ $image->caption }}{{else}}&nbsp;{{/if}}</figcaption>
@@ -60,11 +61,11 @@ Galleria.configure({
 			{{ /if }}
 		</div>
 	</div>
-{{ /foreach }}
+	{{ /foreach }}
 
-
-	
 	{{ include file="_tpl/_edit-article.tpl" }}{{ $gimme->article->full_text }}
+	
+	{{ include file="_tpl/article-attachments.tpl"}}
 
     <!-- Social Buttons BEGIN -->
     <div class="well share-buttons">
