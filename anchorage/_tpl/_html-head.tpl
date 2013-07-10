@@ -56,6 +56,7 @@
     <script src="{{ url static_file="_js/vendor/jquery.zweatherfeed.min.js" }}"></script>
     <script src="{{ url static_file="_js/vendor/jQuery.equalHeights.js" }}"></script>
     <script src="{{ url static_file="_js/vendor/jquery.ba-resize.min.js" }}"></script>
+    <script src="{{ url static_file="_js/vendor/jquery.timeago.js" }}"></script>
     <script src="{{ url static_file="_js/bootstrap.min.js" }}"></script>
     
     <script type="text/javascript">
@@ -92,6 +93,9 @@
 
             //solo para article
             $('.carousel').carousel();
+
+            // initialize timeago plugin for dates
+            $(".timeago").timeago();
 
         });
     </script>

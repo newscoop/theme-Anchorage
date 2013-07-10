@@ -531,10 +531,48 @@ h1.page-title {
   font-size: 12px;
 }
 /* End community --- */
+/* --- Begin Profile */
+.profile-avatar {
+  width: 30%;
+  float: left;
+}
+.profile-bio {
+  width: 65%;
+  float: left;
+}
+.profile-bio h1 {
+  font-weight: 400;
+  margin-top: 10px;
+}
+.profile-bio h4 {
+  font-weight: 400;
+}
+.profile-information {
+  clear: both;
+  border-top: #454545 dotted 1px;
+}
+.profile-information h4 {
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.profile-information .info-value {
+  margin-bottom: 10px;
+}
+.profile-information .information-column {
+  display: inline-block;
+  width: 47%;
+}
+.profile-articles {
+  margin-top: 10px;
+  border-top: #454545 dotted 1px;
+}
+.profile-articles h4 {
+  font-weight: 400;
+  margin-top: 10px;
+}
+/* End Profile --- */
 /* --- Begin Debate */
 /* End Debate --- */
-/* --- Begin Profile */
-/* End Profile --- */
 /* --- Begin Registration and Login Form */
 /* End Registration and Login Form --- */
 /***************************** */

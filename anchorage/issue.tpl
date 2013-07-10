@@ -26,7 +26,7 @@
                                 <article class="articles articles-list">
                                     {{ include file="_tpl/img/img_110x100.tpl" }}
                                     <header class="pull-right">
-                                        <h2><a class="dateline" href="{{ uri options="article" }}">Dateline Pending: </a><a href="{{ uri options="article" }}">{{ $gimme->article->name }}</a></h2>
+                                        <h2><a class="dateline" href="{{ uri options='section' }}">{{ $gimme->article->section->name }}: </a><a href="{{ uri options="article" }}">{{ $gimme->article->name }}</a></h2>
                                     </header>
                                     <div class="excerpt pull-right">
                                         {{ $gimme->article->full_text|truncate:210:"...":true }}
