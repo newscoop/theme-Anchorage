@@ -1,15 +1,48 @@
- {{ if $gimme->article->content_accessible }} 
+{{ if $gimme->article->content_accessible }} 
 	<h1 class="page-title">{{ $gimme->article->name }}</h1>
 
-	{{ if $gimme->article->type_name == "news" }}
+{{ foreach $gimme->article->slideshows as $slideshow }}
+ 	<div class="well">
+		{{ if $gimme->article->type_name == "news" }}
+			<div class="article-info">
+		    	<i class="icon-time"></i> <b>{{#published#}}</b> <time datetime="{{$gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ"}}">{{ $gimme->article->publish_date|camp_date_format:"%d %M %Y" }}</time> 
+		   		 By {{ list_article_authors }} {{ if $gimme->author->user->defined}}<a href="{{ $view->url(['username' => $gimme->author->user->uname], 'user') }}" class="link-color">{{/if}}{{ $gimme->author->name }}{{if $gimme->author->user->defined }}</a>{{/if}} ({{ $gimme->author->type|lower }}) {{ if !$gimme->current_list->at_end }}, {{/if}}{{/list_article_authors}}
+			</div>
+		{{ if $gimme->article->has_map }}
+			<div class="article-info">
+				<i class="icon-map-marker"></i> <b>{{ #locations# }}:</b> {{ list_article_locations }}{{ if $gimme->location->enabled }}{{ $gimme->location->name }}{{ if $gimme->current_list->at_end }}{{ else }}, {{ /if }}{{ /if }}{{ /list_article_locations }}
+			</div> 
+		{{/if}}
+		<div class="article-info">
+		 {{ list_article_topics }}
+		 	{{ if $gimme->current_list->at_beginning }}
+			 	<i class="icon-tag"></i> <b>{{ #topics# }}:</b> {{ /if }}<a class="link-color" href="{{ url options="template topic.tpl" }}">{{ $gimme->topic->name }}</a>{{ if $gimme->current_list->at_end }}{{ else }}, {{ /if }}{{ /list_article_topics }}
+			{{ /if }}
+		</div>
+	</div>
+    <div id="gallery">
+        {{ assign var="style" value='true' }}
+		{{ assign var="counter" value=0 }}              
+		{{ foreach $slideshow->items as $item }}      
+			{{ assign var="counter" value=$counter+1 }}
+            <a href="http://{{ $gimme->publication->site }}/{{ $item->image->original }}"><img src="{{ $item->image->src }}" data-title="{{if $item->caption}}{{ $item->caption }}{{else}}&nbsp;{{/if}}" data-big="http://{{ $gimme->publication->site }}/{{ $item->image->original }}" /></a>
+		{{ /foreach }}
+    </div>
+  	<!-- Gallery vendor plugin -->
+  	<script>
+   		Galleria.loadTheme('{{ url static_file='_js/vendor/galleria/themes/classic/galleria.classic.min.js'}}');
+    	Galleria.run('#gallery');
+Galleria.configure({
+    imageCrop: true,
+});
+  	</script>
+
+{{foreachelse}}
 	<figure class="image">
 	    {{ include file="_tpl/img/img_325x190.tpl" }}
 	    <figcaption>{{ if $image->caption }}{{ $image->caption }}{{else}}&nbsp;{{/if}}</figcaption>
 	</figure>
-	{{ /if }}
-
 	<div class="well">
-
 		{{ if $gimme->article->type_name == "news" }}
 			<div class="article-info">
 		    	<i class="icon-time"></i> <b>{{#published#}}</b><br><time datetime="{{$gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ"}}">{{ $gimme->article->publish_date|camp_date_format:"%d %M %Y" }}</time> 
@@ -20,15 +53,16 @@
 				<i class="icon-map-marker"></i> <b>{{ #locations# }}:</b><br>{{ list_article_locations }}{{ if $gimme->location->enabled }}{{ $gimme->location->name }}{{ if $gimme->current_list->at_end }}{{ else }}, {{ /if }}{{ /if }}{{ /list_article_locations }}
 			</div> 
 		{{/if}}
-
 		<div class="article-info">
 		 {{ list_article_topics }}
 		 	{{ if $gimme->current_list->at_beginning }}
 			 	<i class="icon-tag"></i> <b>{{ #topics# }}:</b><br>{{ /if }}<a class="link-color" href="{{ url options="template topic.tpl" }}">{{ $gimme->topic->name }}</a>{{ if $gimme->current_list->at_end }}{{ else }}, {{ /if }}{{ /list_article_topics }}
 			{{ /if }}
 		</div>
-
 	</div>
+{{ /foreach }}
+
+
 	
 	{{ include file="_tpl/_edit-article.tpl" }}{{ $gimme->article->full_text }}
 

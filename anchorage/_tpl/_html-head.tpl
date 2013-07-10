@@ -58,7 +58,11 @@
     <script src="{{ url static_file="_js/vendor/jquery.ba-resize.min.js" }}"></script>
     <script src="{{ url static_file="_js/vendor/jquery.timeago.js" }}"></script>
     <script src="{{ url static_file="_js/bootstrap.min.js" }}"></script>
-    
+
+    {{ if $gimme->template->name == 'article.tpl'}}
+    <script src="{{ url static_file='_js/vendor/galleria/galleria-1.2.9.min.js'}}"></script>
+    {{/if}}
+
     <script type="text/javascript">
         $(document).ready(function () {
             $('#weather').weatherfeed(['GMXX0007'],{
