@@ -16,12 +16,14 @@
                             <div id="main-content" class="single-page section-page">
                                 {{ list_articles length="5" ignore_issue="true" constraints="type not poll" }}
                                 <article class="articles articles-list">
+                                    {{ if $gimme->section->name != "Dialogue" }}
                                     <figure class="section-thumb pull-left">
                                         <a href="{{ uri options="article" }}">
                                             {{ include file='_tpl/img/img_325x190.tpl'}}
                                         </a>
                                     </figure>
-                                    <header class="pull-right">
+                                    {{/if}}
+                                    <header class="{{ if $gimme->section->name != "Dialogue" }}pull-right{{else}}full-width{{/if}}">
                                         <h2><a href="{{ uri options="article" }}">{{ $gimme->article->name }}</a></h2>
                                     </header>
                                     <div class="excerpt pull-right">

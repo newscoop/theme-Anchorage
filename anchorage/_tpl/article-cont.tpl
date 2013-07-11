@@ -3,7 +3,7 @@
 
 	{{ foreach $gimme->article->slideshows as $slideshow }}
 	{{ if $gimme->article->type_name == "news" }}
- 	<div class="well">
+ 	<div class="well well-article">
 			<div class="article-info">
 		    	<i class="icon-time"></i> <b>{{#published#}}</b> <time datetime="{{$gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ"}}">{{ $gimme->article->publish_date|camp_date_format:"%d %M %Y" }}</time> 
 		   		 By {{ list_article_authors }} 
@@ -57,7 +57,7 @@
 	{{/if}}
 
 	{{ if $gimme->article->type_name == "news" }}
- 	<div class="well">
+ 	<div class="well well-article">
 			<div class="article-info">
 		    	<i class="icon-time"></i> <b>{{#published#}}</b> <br><time datetime="{{$gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ"}}">{{ $gimme->article->publish_date|camp_date_format:"%d %M %Y" }}</time> 
 		   		 By {{ list_article_authors }} 
@@ -88,7 +88,6 @@
 	{{ /foreach }}
 
 	{{ include file="_tpl/_edit-article.tpl" }}{{ $gimme->article->full_text }}
-
 
 	{{ if $gimme->article->type_name == "news" }}
 
