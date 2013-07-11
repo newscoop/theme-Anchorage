@@ -1346,7 +1346,7 @@ hr {
   margin-bottom: 0px;
 }
 #sidebar .polls .pollWrap {
-  background: #353334;
+  background: #302e2f;
   padding: 10px 0px 0px 0px;
   margin: 0px;
   -webkit-box-sizing: border-box;
@@ -1365,6 +1365,8 @@ hr {
 }
 #sidebar .polls .pollWrap .poll-info {
   color: #fff;
+  background: #bc0000;
+  padding: 3px 20px;
   font-weight: bold;
 }
 #sidebar .polls .label-important {
@@ -1430,7 +1432,9 @@ hr {
   -o-transition: background 0.3s;
 }
 #sidebar .polls .total-votes {
-  margin-left: 10px;
+  margin-left: 20px;
+  color: #fff;
+  padding-bottom: 15px;
 }
 #sidebar .polls .progress {
   height: 3px;

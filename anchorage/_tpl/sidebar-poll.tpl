@@ -16,11 +16,13 @@
         {{ assign var="votes" value=0 }}
         {{ list_debate_answers }}
           <div class="poll-option">
-              <label for="radio{{ $gimme->current_list->index }}">{{ $gimme->debateanswer->answer }}</label>
+              <label for="radio{{ $gimme->current_list->index }}">{{ $gimme->debateanswer->answer }}
+              <span class="q-score label label-important"> <small>{{ math equation="round(x)" x=$gimme->debateanswer->percentage_overall format="%d" }}%</small></span>
+              </label>
               <div class="progress progress-danger progress-striped debate-bar">
                     <div class="bar" style="width:{{ math equation="round(x)" x=$gimme->debateanswer->percentage_overall format="%d" }}%;"></div>
               </div>
-              <span class="q-score label label-important"> <small>{{ math equation="round(x)" x=$gimme->debateanswer->percentage_overall format="%d" }}%</small></span>
+              
           </div>
             {{ assign var="votes" value=$votes+$gimme->debateanswer->votes }}
             {{ if $gimme->current_list->at_end }}
@@ -32,10 +34,10 @@
        {{ if $gimme->debate->is_votable }}
 
             <blockquote>{{ $gimme->debate->question }}</blockquote> 
-            {{ debate_form template="_tpl/sidebar_poll.tpl" submit_button="{{ #pollButton# }}" html_code="id=\"poll-button\" class=\"button debbut center\"" }}  
+            {{ debate_form template="_tpl/sidebar-poll.tpl" submit_button="{{ #pollButton# }}" html_code="id=\"poll-button\" class=\"button debbut center\"" }}  
             
             {{* this is to find out template id for this template, will have to be assigned as hidden form field *}}     
-            {{ $uriAry=explode("tpl=", {{ uri options="template _tpl/sidebar_poll.tpl" }}, 2) }}                        
+            {{ $uriAry=explode("tpl=", {{ uri options="template _tpl/sidebar-poll.tpl" }}, 2) }}                        
 
             <input name="tpl" value="{{ $uriAry[1] }}" type="hidden">
             {{ list_debate_answers }}

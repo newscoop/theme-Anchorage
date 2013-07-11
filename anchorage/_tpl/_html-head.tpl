@@ -103,6 +103,12 @@
             // initialize timeago plugin for dates
             $(".timeago").timeago();
 
+            // Poll Ajaxified
+            $('#poll-button').click(function(){
+              $.post($('form[name=debate]').attr("action"),$('form[name=debate]').serialize(),function(data){$('#poll').html(data);});
+              return false;
+            }); 
+
         });
     </script>
 </head>
