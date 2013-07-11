@@ -559,6 +559,15 @@ h1.page-title {
 .video-attachment .flowplayer {
   margin-bottom: 5px;
 }
+.cs_img p img {
+  width: 100%;
+}
+.cs_img_caption {
+  background: #fff;
+  font-size: 11px !important;
+  margin: -10px 0 0;
+  padding: 5px;
+}
 /* End Single Page --- */
 /* --- Begin Section page */
 .section-page .articles-list .section-thumb {
@@ -705,6 +714,10 @@ a.link-color {
   font-weight: 600;
 }
 a.link-color:hover {
+  color: #bc0000;
+  text-decoration: none;
+}
+a {
   color: #bc0000;
   text-decoration: none;
 }
