@@ -19,7 +19,7 @@
 
                                 {{ local }} 
                                 {{ set_current_issue }} 
-                                {{ list_articles length="2" order="bypopularity desc" constraints="public is off" }}
+                                {{ list_articles length="2" order="bypopularity desc"  ignore_section="true" constraints="public is off" }}
                                 {{ if $gimme->current_list->at_beginning }}
                                 <section id="premium-articles" class="block">
 
