@@ -1,7 +1,7 @@
                             <div id="sidebar">
 
                                 <section id="most-read" class="block">
-                                    <h4>Most Read</h4>
+                                    <h4>{{ #mostRead# }}</h4>
 
                                     {{ local }} 
                                     {{ set_current_issue }} 
@@ -17,42 +17,35 @@
 
                                 </section>
 
+                                {{ local }} 
+                                {{ set_current_issue }} 
+                                {{ list_articles length="2" order="bypopularity desc" constraints="public is off" }}
+                                {{ if $gimme->current_list->at_beginning }}
                                 <section id="premium-articles" class="block">
-                                    <h4>Premium articles</h4>
 
+                                    <h4>{{ #premiumArticles# }}</h4>
+                                {{ /if }}
                                     <div class="premium-articles">
                                       <div class="premium-articles-left">
-                                        <a href="">
-                                          <img src="http://lorempixel.com/64/64/">
+                                        <a href="{{ uri options="article" }}">
+                                          {{ include file="_tpl/img/img_64x64.tpl" }}
                                         </a>
                                       </div>
                                       <div class="premium-articles-right">
-                                        <a href="#" class="premium-title">Donec id elit non mi porta gravida at eget </a>
+                                          <a href="{{ uri options="article" }}" class="premium-title">{{ $gimme->article->name }}</a>
                                         <div class="premium-description">
-                                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.
+                                            {{ $gimme->article->full_text|truncate:140:"...":true }}
                                         </div>
-                                        <a href="#" class="btn btn-mini premium-button"><i class="icon-lock"></i> Read</a>
+                                        <a href="{{ uri options="article" }}" class="btn btn-mini premium-button"><i class="icon-lock"></i>{{ #readMore# }}</a>
                                       </div>
                                       <div class="clearfix"></div>
                                     </div>
 
-                                    <div class="premium-articles">
-                                      <div class="premium-articles-left">
-                                        <a href="">
-                                          <img src="http://lorempixel.com/64/64/">
-                                        </a>
-                                      </div>
-                                      <div class="premium-articles-right">
-                                        <a href="#" class="premium-title">Donec id elit non mi porta gravida at eget metus porta gravida at eget metus.</a>
-                                        <div class="premium-description">
-                                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.
-                                        </div>
-                                        <a href="#" class="btn btn-mini premium-button"><i class="icon-lock"></i> Read</a>
-                                      </div>
-                                      <div class="clearfix"></div>
-                                    </div>
-
+                                {{ if $gimme->current_list->at_end}}
                                 </section>
+                                {{ /if }}
+                                {{ /list_articles }}
+                                {{ /local }}
 
                                 <section id="articles-slider" class="carousel slide">
       

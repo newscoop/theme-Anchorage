@@ -34,7 +34,7 @@
                                             <div class="video">
                                                 <figure class="video-thumb">
                                                     <a href="{{ url options='article' }}">
-                                                        {{ include file="_tpl/img_185x100.tpl" }}
+                                                        {{ include file="_tpl/img/img_185x100.tpl" }}
                                                     </a>
                                                     <figcaption class="video-caption">{{ #watchVideo# }}</figcaption>
                                                 </figure>
