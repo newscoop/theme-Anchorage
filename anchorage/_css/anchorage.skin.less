@@ -581,6 +581,76 @@ hr{
     	.solid-button();
     }
 
+    .polls{
+        h4{
+            font-weight: 400px;
+            color:@main-color + 10;
+            padding:0px 20px;
+        }
+        form{
+            margin-bottom: 0px;
+        }
+
+        .pollWrap{
+            background: @dark-color - 35; 
+            padding: 10px 0px 0px 0px;
+            margin: 0px;
+            .box-sizing;
+            color:@dark-color + 60;
+            blockquote{
+                color:#fff;
+                font-weight: bold;
+                font-size: 12px;
+                border:0;
+                padding:0 20px;
+                margin-top:5px;
+                margin-bottom: 15px;
+            }
+            .poll-info{
+                color:#fff;
+                font-weight: bold;
+            }
+        }
+
+        .label-important{
+            margin-left: 5px;
+            margin-bottom: 3px;
+            font-size: 10px;
+            .rounded-corners(0px);
+        }
+
+        input[type="submit"]{
+            color: #fff;
+            border: none;
+            padding: 6px;
+            .solid-button;
+            .rounded-corners(3x);
+            width: 100%;
+            margin-top:-15px;
+        }
+        .total-votes{
+            margin-left:10px;
+        }
+        .progress{
+            height: 3px;
+        }
+        .poll-option{
+            padding: 0px 10px;
+            margin: 0px 10px 10px 10px;
+            .box-sizing;
+
+            label{
+                font-size: 12px;
+            }
+            input[type="radio"]{
+                margin-right: 5px;
+                position: relative;
+                margin-right: 10px;
+                float: left;
+            }
+        }
+    }
+
 }
 
 /* End Sidebar --- */

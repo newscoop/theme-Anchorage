@@ -1337,6 +1337,120 @@ hr {
   -webkit-transition: background 0.3s;
   -o-transition: background 0.3s;
 }
+#sidebar .polls h4 {
+  font-weight: 400px;
+  color: #c60a0a;
+  padding: 0px 20px;
+}
+#sidebar .polls form {
+  margin-bottom: 0px;
+}
+#sidebar .polls .pollWrap {
+  background: #353334;
+  padding: 10px 0px 0px 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #949293;
+}
+#sidebar .polls .pollWrap blockquote {
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  border: 0;
+  padding: 0 20px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+#sidebar .polls .pollWrap .poll-info {
+  color: #fff;
+  font-weight: bold;
+}
+#sidebar .polls .label-important {
+  margin-left: 5px;
+  margin-bottom: 3px;
+  font-size: 10px;
+  border-radius: 0px;
+  -ms-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -khtml-border-radius: 0px;
+}
+#sidebar .polls input[type="submit"] {
+  color: #fff;
+  border: none;
+  padding: 6px;
+  position: relative;
+  border: 0;
+  text-decoration: none;
+  background: #bc0000;
+  -webkit-box-shadow: 0px 2px 0px 0px #940000;
+  -moz-box-shadow: 0px 2px 0px 0px #940000;
+  box-shadow: 0px 2px 0px 0px #940000;
+  padding: 5px 15px;
+  color: #fff !important;
+  font-size: 13px;
+  font-weight: 700;
+  transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  -webkit-transition: background 0.3s;
+  -o-transition: background 0.3s;
+  border-radius: 2px;
+  -ms-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 3 x;
+  -ms-border-radius: 3 x;
+  -moz-border-radius: 3 x;
+  -webkit-border-radius: 3 x;
+  -khtml-border-radius: 3 x;
+  width: 100%;
+  margin-top: -15px;
+}
+#sidebar .polls input[type="submit"]:visited,
+#sidebar .polls input[type="submit"]:focus {
+  text-decoration: none;
+  color: #fff;
+}
+#sidebar .polls input[type="submit"]:active {
+  top: 1px;
+  -webkit-box-shadow: 0px 0px 0px 0px #940000;
+  -moz-box-shadow: 0px 0px 0px 0px #940000;
+  box-shadow: 0px 0px 0px 0px #940000;
+}
+#sidebar .polls input[type="submit"]:hover {
+  background: #da1e1e;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  -webkit-transition: background 0.3s;
+  -o-transition: background 0.3s;
+}
+#sidebar .polls .total-votes {
+  margin-left: 10px;
+}
+#sidebar .polls .progress {
+  height: 3px;
+}
+#sidebar .polls .poll-option {
+  padding: 0px 10px;
+  margin: 0px 10px 10px 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#sidebar .polls .poll-option label {
+  font-size: 12px;
+}
+#sidebar .polls .poll-option input[type="radio"] {
+  margin-right: 5px;
+  position: relative;
+  margin-right: 10px;
+  float: left;
+}
 /* End Sidebar --- */
 /* --- Begin Footer */
 #footer {

@@ -85,6 +85,8 @@
 
                                   <img class="ad" src="{{ url static_file="_img/sourcefabric-ad.png" }}">
 
+                                  {{ include file="_tpl/sidebar-poll.tpl" }}
+
                                 </section>
 
                                 <div class="clearfix"></div>
