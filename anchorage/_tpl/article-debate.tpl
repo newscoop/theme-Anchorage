@@ -52,7 +52,7 @@
     {{ /list_article_authors }}
 
     {{ $gimme->article->pro_text }}
-
+	
     <h1 class="page-title">CONTRA: {{ $gimme->article->contra_title }}</h1>
     {{ list_article_authors }}
         {{ if $gimme->current_list->index == "2"}}

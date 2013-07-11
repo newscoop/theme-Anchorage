@@ -5,7 +5,7 @@
 
                                     {{ local }} 
                                     {{ set_current_issue }} 
-                                    {{ list_articles length="3" order="bypopularity desc" constraints="type is news" }}
+                                    {{ list_articles length="3" ignore_section="true" order="bypopularity desc" constraints="type is news" }}
                                     <div class="most-read-articles">
                                       <a href="{{ uri options="article" }}" class="most-read-title">{{ $gimme->article->name }}</a>
                                       <div class="most-read-description">
@@ -16,6 +16,12 @@
                                     {{ /local }}
 
                                 </section>
+
+                                {{ if $gimme->article->type_name == "debate" }}
+                                <section id="debate-widget" class="block">
+                                  {{ include file="_tpl/debate-voting.tpl" }}
+                                </section>
+                                {{ /if }}
 
                                 {{ local }} 
                                 {{ set_current_issue }} 
@@ -34,7 +40,7 @@
                                       <div class="premium-articles-right">
                                           <a href="{{ uri options="article" }}" class="premium-title">{{ $gimme->article->name }}</a>
                                         <div class="premium-description">
-                                            {{ $gimme->article->full_text|truncate:140:"...":true }}
+                                            {{ $gimme->article->full_text|truncate:100:"...":true }}
                                         </div>
                                         <a href="{{ uri options="article" }}" class="btn btn-mini premium-button"><i class="icon-lock"></i>{{ #readMore# }}</a>
                                       </div>
@@ -77,10 +83,12 @@
                                 <section id="extra" class="block">
 
                                   <img class="ad" src="{{ url static_file="_img/sourcefabric-ad.png" }}">
-
+                                  
+                                  {{ if $gimme->article->type_name != "debate" }}
                                   <div id="poll">
                                     {{ include file="_tpl/sidebar-poll.tpl" }}
                                   </div>
+                                  {{/if}}
 
                                 </section>
 
