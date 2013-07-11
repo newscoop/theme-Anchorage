@@ -1,6 +1,6 @@
 <aside id="comments-block">
     {{ list_article_comments order="bydate desc" }}
-    <div class="comment">
+    <div id="comment-{{$gimme->current_list->index}}" class="comment">
         <div class="comment-content">
             {{ $gimme->comment->content }}
         </div>
