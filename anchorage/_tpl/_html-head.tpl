@@ -90,7 +90,6 @@
             // Equal heights in internal column divs
             $('.columns').equalHeights();
             $('.comment').equalHeights();
-            $('#comment-form').equalHeights();
             $('#sidebar').height($('#sidebar-container').height());
             $("#main-content,#sidebar").resize(function(e){
                 $('.columns').equalHeights();

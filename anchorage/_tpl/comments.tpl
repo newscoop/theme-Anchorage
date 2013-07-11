@@ -17,10 +17,6 @@
     {{ /list_article_comments }}
     <h4>{{ #writeComment# }}</h4>
 
-    {{ if !$gimme->user->logged_in}}
-        <a href="{{ $view->url(['controller' => 'auth', 'action' =>'index'], 'default') }}" class="link-color">{{ #loginOrSignUp# }}</a>
-    {{/if}}
-
      {{ if !$gimme->publication->public_comments }}
             <!-- public comments are not allowed-->
             {{ if $gimme->user->logged_in }}
@@ -39,16 +35,23 @@
                             {{ /if }}
                         {{ /if }}   
                     {{ /if }}
-            {{ comment_form html_code="id=\"commentform\"" _button="submit" button_html_code="tabindex=\"6\" class=\"btn btn-large pull-right\" " }}
-            <div class="row">                                                
-                <div class="span4">
-                    {{ camp_edit object="comment" attribute="content" html_code="id=\"comment\" tabindex=\"4\" placeholder=\"Write your message here\" " }}
+            {{ comment_form html_code="id=\"comment-form\" class=\"form-horizontal\" " _button="submit" button_html_code="tabindex=\"6\" class=\"solid-button form-column-right\" " }}
+            <div class="form-column-left">                                     
+                <div class="control-group">
+                    <label class="control-label" for="">Comment</label>
+                    <div class="controls">
+                    {{ camp_edit object="comment" attribute="content" html_code="id=\"comment\" tabindex=\"4\"" }}
+                    </div>
                 </div>
-                <div class="span4">
-                    {{ recaptcha }}
+                <div class="control-group">
+                    <div class="controls">
+                        {{ recaptcha }}
+                    </div>
                 </div>
             </div>
+            <div class="clearfix"></div>
             {{ /comment_form }}
+            <div class="clearfix"></div>
             {{ else }}
                 <p>{{ #commentsLocked# }}</p>
             {{ /if }}
@@ -73,16 +76,23 @@
                 {{ /if }}   
             {{ /if }}
 
-            {{ comment_form html_code="id=\"commentform\"" _button="submit" button_html_code="tabindex=\"6\" class=\"btn btn-large pull-right\" " }}
-            <div class="row">                                                
-                <div class="span4 login-textarea">
-                    {{ camp_edit object="comment" attribute="content" html_code="id=\"comment\" tabindex=\"4\" placeholder=\"Write your message here\" " }}
+            {{ comment_form html_code="id=\"comment-form\" class=\"form-horizontal\" " _button="submit" button_html_code="tabindex=\"6\" class=\"solid-button form-column-right\" "  }}
+            <div class="form-column-left">                                     
+                <div class="control-group">
+                    <label class="control-label" for="">Comment</label>
+                    <div class="controls">
+                    {{ camp_edit object="comment" attribute="content" html_code="id=\"comment\" tabindex=\"4\"" }}
+                    </div>
                 </div>
-                <div class="span4">
-                    {{ recaptcha }}
+                <div class="control-group">
+                    <div class="controls">
+                        {{ recaptcha }}
+                    </div>
                 </div>
             </div>
+            <div class="clearfix"></div>
             {{ /comment_form }}
+            <div class="clearfix"></div>
             {{ else }}
                 <p>{{ #commentsLocked# }}</p>
             {{ /if }}
@@ -104,19 +114,35 @@
                 {{ /if }}
 
 
-            {{ comment_form html_code="id=\"commentform\"" _button="submit" button_html_code="tabindex=\"6\" class=\"btn btn-large pull-right\" " }}
-            <div class="row">                                                
-                <div class="span4">
-                    {{ camp_edit object="comment" attribute="nickname" html_code="id=\"author\" tabindex=\"1\" placeholder=\"Your name\" " }}
-                    {{ camp_edit object="comment" attribute="reader_email" html_code="id=\"email\" tabindex=\"2\" placeholder=\"Your Email\"" }}
-                    {{ camp_edit object="comment" attribute="content" html_code="id=\"comment\" tabindex=\"4\" placeholder=\"Write your message here\" " }}
+            {{ comment_form html_code="id=\"comment-form\" class=\"form-horizontal\" " _button="submit" button_html_code="tabindex=\"6\" id=\"comment-button\"  class=\"solid-button form-column-right\" " }}
+            <div class="form-column-left">
+                <div class="control-group">
+                    <label class="control-label" for="inputName">Name</label>
+                        <div class="controls">
+                            {{ camp_edit object="comment" attribute="nickname" html_code="id=\"author\" tabindex=\"1\" " }}
+                        </div>
                 </div>
-                <div class="span4">
-                    {{ recaptcha }}
+                <div class="control-group">
+                        <label class="control-label" for="inputEmail">Email</label>
+                        <div class="controls">
+                        {{ camp_edit object="comment" attribute="reader_email" html_code="id=\"email\" tabindex=\"2\"" }}
+                        </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="">Comment</label>
+                    <div class="controls">
+                        {{ camp_edit object="comment" attribute="content" html_code="id=\"comment\" tabindex=\"4\" " }}
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="controls">
+                        {{ recaptcha }}
+                    </div>
                 </div>
             </div>
-
-        {{ /comment_form }}
+            <div class="clearfix"></div>
+            {{ /comment_form }}
+            <div class="clearfix"></div>
             {{ else }}
             <p>{{ #commentsLocked# }}</p>
         {{ /if }}

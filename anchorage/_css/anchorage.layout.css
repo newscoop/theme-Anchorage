@@ -427,6 +427,8 @@ h1.page-title {
   float: right;
   width: 25%;
   position: relative;
+  margin-top: -35px;
+  margin-right: 10px;
 }
 #comments-block #comment-form .control-label {
   font-size: 12px;
