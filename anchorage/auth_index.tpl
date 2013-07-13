@@ -13,8 +13,8 @@
                 <div id="main" class="span12">
                     <div class="row columns">
                         <div class="span8 column">
-                            <div id="main-content" class="single-page section-page">
-                                <div class="anchorage-form">
+                            <div id="main-content" class="login-page">
+                                <div class="anchorage-form well-form well">
                                      <form action="{{ $form->getAction() }}" class="zend_form" method="{{ $form->getMethod() }}">
                                         {{ if $form->isErrors() }}
                                         <div class="alert alert-error">
@@ -36,7 +36,7 @@
                                             </dd>
                                         </dl>
                                         <div class="form-buttons right">
-                                            <input type="submit" id="submit" class="button big" value="{{ #login# }}" />
+                                            <input type="submit" id="submit" class="solid-button" value="{{ #login# }}" />
                                         </div>
                                     </form>
                                 </div>

@@ -689,6 +689,83 @@ h1.page-title {
 /* --- Begin Debate */
 /* End Debate --- */
 /* --- Begin Registration and Login Form */
+.anchorage-form {
+  padding-right: 30px;
+}
+.anchorage-form:after {
+  content: " ";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+.zend_form {
+  width: 96%;
+}
+.zend_form dt {
+  float: left;
+  margin-right: 3.8%;
+  width: 39.45%;
+}
+.zend_form input[type="text"],
+.zend_form input[type="password"],
+.zend_form textarea {
+  width: 100%;
+  border-radius: 0px;
+  -ms-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -khtml-border-radius: 0px;
+  -webkit-box-shadow: 0px 2px 0px 0px #e7e7e7;
+  -moz-box-shadow: 0px 2px 0px 0px #e7e7e7;
+  box-shadow: 0px 2px 0px 0px #e7e7e7;
+}
+.zend_form dd {
+  margin-left: 0;
+  width: 56.75%;
+  float: left;
+}
+.zend_form #fieldset-newsletter dd {
+  margin-left: 0;
+  width: 8%;
+  float: left;
+}
+.zend_form #fieldset-newsletter dt {
+  float: right;
+  margin-right: 3.8%;
+  width: 86%;
+  margin-bottom: 10px;
+}
+.zend_form #attributes-element {
+  width: 100%;
+}
+.zend_form #attributes-element #attributes-gender-male {
+  margin-right: 10px;
+}
+.zend_form #attributes-element #attributes-gender-female {
+  margin-right: 10px;
+}
+.zend_form #attributes-element label[for="attributes-gender-female"] {
+  margin-top: -15px;
+  margin-bottom: 10px;
+}
+.zend_form #attributes-element #attributes-first_name_public-element,
+.zend_form #attributes-element #attributes-last_name_public-element,
+.zend_form #attributes-element #attributes-email_public-element {
+  float: left;
+  margin-top: -10px;
+}
+.zend_form #attributes-element #attributes-first_name_public-element input[type="radio"],
+.zend_form #attributes-element #attributes-last_name_public-element input[type="radio"],
+.zend_form #attributes-element #attributes-email_public-element input[type="radio"],
+.zend_form #attributes-element #attributes-first_name_public-element input[type="checkbox"],
+.zend_form #attributes-element #attributes-last_name_public-element input[type="checkbox"],
+.zend_form #attributes-element #attributes-email_public-element input[type="checkbox"] {
+  height: 40px;
+}
+.zend_form #submit-element {
+  margin-bottom: 10px;
+}
 /* End Registration and Login Form --- */
 /***************************** */
 /******** End Layout ********* */
@@ -726,6 +803,26 @@ a {
 hr {
   border-top: 1px dotted #b2b2b2;
   height: 1px;
+}
+.alert-error {
+  background: #a73a42;
+  border: #86221e 1px solid;
+  -webkit-box-shadow: 0px 0px 0px 3px #d3d9d6;
+  -moz-box-shadow: 0px 0px 0px 3px #d3d9d6;
+  box-shadow: 0px 0px 0px 3px #d3d9d6;
+  border-radius: 0px;
+  -ms-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -khtml-border-radius: 0px;
+  color: #e8dddd;
+  text-shadow: 0px 0px 0px #a70001;
+  -moz-text-shadow: 0px 0px 0px #a70001;
+  -webkit-text-shadow: 0px 0px 0px #a70001;
+  font-size: 12px;
+}
+.alert-error a {
+  color: #fff;
 }
 .bold-weight {
   font-weight: 700;
@@ -1682,6 +1779,14 @@ hr {
 }
 /* End Debate --- */
 /* --- Registration and Login Form */
+.well-form {
+  border-radius: 0px;
+  -ms-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -khtml-border-radius: 0px;
+  background: #fff;
+}
 /* End Registration and Login Form   --- */
 /***************************** */
 /***** End Anchorage Skin **** */

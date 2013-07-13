@@ -740,9 +740,82 @@ h1.page-title{
 /* End Debate --- */
 
 
+
 /* --- Begin Registration and Login Form */
 
+.anchorage-form{
+    padding-right: 30px;
 
+    &:after{
+        content: " ";
+        display: block;
+        height: 0;
+        overflow: hidden;
+        clear:both;
+    }
+    
+}
+.zend_form{
+    width: 96%;
+    dt {
+        float: left;
+        margin-right: 3.8%;
+        width: 39.45%;
+    }
+
+    input[type="text"],input[type="password"],textarea{
+        width: 100%;
+        .rounded-corners(0px);
+        .box-shadow(0px,2px,0px,0px,#e7e7e7);
+    }
+
+    dd {
+        margin-left: 0;
+        width: 56.75%;
+        float: left;
+    }
+
+    #fieldset-newsletter{
+        dd {
+            margin-left: 0;
+            width: 8%;
+            float: left;
+        }
+        dt {
+            float: right;
+            margin-right: 3.8%;
+            width: 86%;
+            margin-bottom: 10px;
+        }
+    }
+
+    #attributes-element{
+        width: 100%;
+        #attributes-gender-male{
+            margin-right: 10px
+        }
+        #attributes-gender-female{
+            margin-right: 10px;
+        }
+        label[for="attributes-gender-female"]{
+            margin-top:-15px;
+            margin-bottom: 10px;
+        }
+        #attributes-first_name_public-element,
+        #attributes-last_name_public-element,
+        #attributes-email_public-element{
+            float: left;
+            margin-top:-10px;
+            input[type="radio"], input[type="checkbox"] {
+                height: 40px;
+            }
+        }
+    }
+
+    #submit-element{
+        margin-bottom:10px;
+    }
+}
 
 /* End Registration and Login Form --- */
 
