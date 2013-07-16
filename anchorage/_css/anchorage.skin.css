@@ -52,6 +52,11 @@ figure figcaption {
   background: #b6b6b6;
   color: #fff;
 }
+#header .header-top .login-user-action {
+  color: #fff;
+  line-height: 37px;
+  padding-left: 15px;
+}
 #header .form-search {
   float: right;
   margin-right: 15px;
@@ -897,6 +902,7 @@ hr {
   background: #161616;
   color: #fff;
 }
+.form-button .icon-user,
 .form-button .icon-chevron-right {
   background: #808080;
   padding: 4px 7px;
@@ -998,6 +1004,27 @@ hr {
 }
 #header .header-top .top-block-right {
   background: #bc0000;
+}
+#header .header-top .login-user-action .solid-button {
+  font-size: 11px;
+  font-weight: 400;
+  margin-left: 10px;
+  color: #bcbabb !important;
+  background: #211f20;
+  -webkit-box-shadow: 0px 2px 0px 0px #121011;
+  -moz-box-shadow: 0px 2px 0px 0px #121011;
+  box-shadow: 0px 2px 0px 0px #121011;
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+#header .header-top .login-user-action .solid-button:hover {
+  background: #302e2f;
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
 }
 #header .form-search .search-query {
   color: #6c6c6c;
@@ -1161,6 +1188,10 @@ hr {
 .articles .featured-thumb .landing-title {
   border-left: #bc0000 15px solid;
 }
+.articles .featured-thumb .landing-title a {
+  color: #fff;
+  text-decoration: none;
+}
 .articles h2 a {
   color: #444243;
 }
@@ -1292,6 +1323,17 @@ hr {
   color: #d8d8d8;
   font-size: 12px;
   padding-bottom: 15px;
+}
+#sidebar #user-block {
+  background: #bc0000;
+  text-align: center;
+  color: #fff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+#sidebar #user-block .btn {
+  margin-top: 10px;
+  text-transform: uppercase;
 }
 #sidebar #most-read {
   background: #f2f2f2 url(../_img/main-background.png) repeat-x top center;

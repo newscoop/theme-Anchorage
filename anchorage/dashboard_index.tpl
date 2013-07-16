@@ -14,7 +14,7 @@
                     <div class="row columns">
                         <div class="span8 column">
                             <div id="main-content" class="dashboard-page">
-                            <h1>{{ #welcome# }} {{ $user->name }}</h1>
+                            <h1 class="page-title">{{ #welcome# }} {{ $user->name }}</h1>
                                 <center>
                                     <span class="label">{{ #currentAvatar# }}</span><br>
                                     <figure class="user-image">

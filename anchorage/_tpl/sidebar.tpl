@@ -5,6 +5,7 @@
                                     <script src="//www.gmodules.com/ig/ifr?url=http://hosting.gmodules.com/ig/gadgets/file/100840413740199312943/StockQuotes.xml&amp;up_stockList=%5EIXIC%2C%5EGSPC%2C%5EN225%2C%5EHSI%2C%5ESTI%2C%5EFTSE%2C%5EGDAXI%2C%5EFCHI&amp;up_chart_bool=1&amp;up_font_size=11&amp;up_symbol_bool=0&amp;up_chart_period=1&amp;synd=open&amp;w=260&amp;h=300&amp;title=&amp;border=%23ffffff%7C3px%2C1px+solid+%23999999&amp;output=js"></script>
                                 </section>
 
+                                {{ if !$gimme->user->logged_in}}
                                 <section id="login-form" class="block">
                                     <h4>{{ #premiumLogin# }}</h4>
                                     <form class="form-horizontal" action="{{ $view->url(['controller' => 'auth', 'action' =>'index'], 'default') }}" method="post">
@@ -41,6 +42,22 @@
                                     <p><strong>{{ #advantages# }}:</strong> Nulla vitae elit libero, a pharetra augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit tempus porttitor.</p>
                                     <a href="{{ $view->url(['controller' => 'register', 'action' => 'index']) }}" class="solid-button">{{ #registerNow# }}</a>
                                 </section>
+
+                                {{else}}
+
+                                <section id="user-block" class="block">
+  
+                                    <figure class="user-image">
+                                        <img src="{{ include file="_tpl/user-image.tpl" user=$user width=140 height=210 }}" style="max-width: 100%" rel="resizable" />
+                                    </figure>
+                                    {{$gimme->user->name}}
+                                    <br>
+                                    <a href="/dashboard" class="btn form-button"><i class="icon-user"></i>{{ #profile# }}</a>
+                                    <a href="{{ $view->url(['controller' => 'auth', 'action' =>'logout'], 'default') }}" class="btn form-button"><i class="icon-chevron-right"></i>{{ #logout# }}</a>
+                                 
+                                </section>
+
+                                {{/if}}
 
                                 <section id="extra" class="block">
 

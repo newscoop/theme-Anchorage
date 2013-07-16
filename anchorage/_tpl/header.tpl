@@ -7,7 +7,13 @@
                     <div class="span12 header-top">
                         <div class="row">
                             <div class="span6">
-                                <div class="top-block-left"></div>
+                                <div class="top-block-left login-user-action">
+                                    {{ if $gimme->user->logged_in }}
+                                        {{ #hi# }} <b>{{$gimme->user->name}}</b>
+                                        <a href="/dashboard" class="solid-button"><i class="icon-user"></i>&nbsp;&nbsp;{{ #profile# }}</a>
+                                        <a href="{{ $view->url(['controller' => 'auth', 'action' =>'logout'], 'default') }}" class="solid-button"><i class="icon-chevron-right"></i>&nbsp;&nbsp;{{ #logout# }}</a>
+                                    {{/if}}
+                                </div>
                             </div>
                             <div class="span6">
                                 <div class="top-block-right">

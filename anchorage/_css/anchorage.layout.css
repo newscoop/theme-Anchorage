@@ -51,6 +51,11 @@ figure figcaption {
   background: #b6b6b6;
   color: #fff;
 }
+#header .header-top .login-user-action {
+  color: #fff;
+  line-height: 37px;
+  padding-left: 15px;
+}
 #header .form-search {
   float: right;
   margin-right: 15px;
