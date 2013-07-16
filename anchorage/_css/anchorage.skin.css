@@ -682,11 +682,13 @@ h1.page-title {
   display: inline-block;
   width: 47%;
 }
-.profile-articles {
+.profile-articles,
+.profile-comments {
   margin-top: 10px;
   border-top: #454545 dotted 1px;
 }
-.profile-articles h4 {
+.profile-articles h4,
+.profile-comments h4 {
   font-weight: 400;
   margin-top: 10px;
 }
@@ -1004,6 +1006,9 @@ hr {
 }
 #header .header-top .top-block-right {
   background: #bc0000;
+}
+#header .header-top .login-user-action a {
+  color: #fff;
 }
 #header .header-top .login-user-action .solid-button {
   font-size: 11px;
@@ -1330,6 +1335,12 @@ hr {
   color: #fff;
   padding-top: 15px;
   padding-bottom: 15px;
+}
+#sidebar #user-block a {
+  color: #fff;
+}
+#sidebar #user-block a :hover {
+  text-decoration: none;
 }
 #sidebar #user-block .btn {
   margin-top: 10px;
@@ -1804,6 +1815,15 @@ hr {
 .profile-information .value {
   padding-left: 6px;
   font-size: 12px;
+}
+.profile-comments {
+  font-size: 12px;
+}
+.profile-comments .link-color {
+  font-weight: 400;
+}
+.profile-comments .comment-info {
+  font-size: 10px;
 }
 /* End Profile --- */
 /* --- Begin Debate */

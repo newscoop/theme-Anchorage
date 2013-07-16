@@ -681,11 +681,13 @@ h1.page-title {
   display: inline-block;
   width: 47%;
 }
-.profile-articles {
+.profile-articles,
+.profile-comments {
   margin-top: 10px;
   border-top: #454545 dotted 1px;
 }
-.profile-articles h4 {
+.profile-articles h4,
+.profile-comments h4 {
   font-weight: 400;
   margin-top: 10px;
 }
