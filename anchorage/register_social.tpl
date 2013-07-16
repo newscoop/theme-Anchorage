@@ -13,15 +13,16 @@
                 <div id="main" class="span12">
                     <div class="row columns">
                         <div class="span8 column">
-                            <div id="main-content" class="single-page section-page">
-                                <h1>{{ #hi# }}, {{ $name }}</h1>
+                            <div id="main-content" class="register-page">
+                                <h1 class="page-title">{{ #hi# }}, {{ $name }}</h1>
 
                                 <p>{{ #youAreHereForTheFirstTime# }}</p>
                                 {{ if !empty($error) }}
-                                <p style="color: #c00;"><strong>{{ $error }}</strong></p>
+                                <div class="alert alert-error"><strong>{{ $error }}</strong></div>
                                 {{ /if }}
-
-                                {{ $form }}
+                                <div class="anchorage-form well-form well">
+                                 {{ $form }}
+                                </div>
                            </div>
                         </div>
                         <!-- Begins Sidebar -->

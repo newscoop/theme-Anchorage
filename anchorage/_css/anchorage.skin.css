@@ -804,17 +804,19 @@ hr {
   border-top: 1px dotted #b2b2b2;
   height: 1px;
 }
+.alert {
+  border-radius: 0px;
+  -ms-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -khtml-border-radius: 0px;
+}
 .alert-error {
   background: #a73a42;
   border: #86221e 1px solid;
   -webkit-box-shadow: 0px 0px 0px 3px #d3d9d6;
   -moz-box-shadow: 0px 0px 0px 3px #d3d9d6;
   box-shadow: 0px 0px 0px 3px #d3d9d6;
-  border-radius: 0px;
-  -ms-border-radius: 0px;
-  -moz-border-radius: 0px;
-  -webkit-border-radius: 0px;
-  -khtml-border-radius: 0px;
   color: #e8dddd;
   text-shadow: 0px 0px 0px #a70001;
   -moz-text-shadow: 0px 0px 0px #a70001;
@@ -1786,6 +1788,51 @@ hr {
   -webkit-border-radius: 0px;
   -khtml-border-radius: 0px;
   background: #fff;
+}
+.zend_form #submit {
+  position: relative;
+  border: 0;
+  text-decoration: none;
+  background: #bc0000;
+  -webkit-box-shadow: 0px 2px 0px 0px #940000;
+  -moz-box-shadow: 0px 2px 0px 0px #940000;
+  box-shadow: 0px 2px 0px 0px #940000;
+  padding: 5px 15px;
+  color: #fff !important;
+  font-size: 13px;
+  font-weight: 700;
+  transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  -webkit-transition: background 0.3s;
+  -o-transition: background 0.3s;
+  border-radius: 2px;
+  -ms-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -khtml-border-radius: 2px;
+}
+.zend_form #submit:visited,
+.zend_form #submit:focus {
+  text-decoration: none;
+  color: #fff;
+}
+.zend_form #submit:active {
+  top: 1px;
+  -webkit-box-shadow: 0px 0px 0px 0px #940000;
+  -moz-box-shadow: 0px 0px 0px 0px #940000;
+  box-shadow: 0px 0px 0px 0px #940000;
+}
+.zend_form #submit:hover {
+  background: #da1e1e;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  -webkit-transition: background 0.3s;
+  -o-transition: background 0.3s;
+}
+.dashboard-page .user-image {
+  margin-bottom: 15px;
 }
 /* End Registration and Login Form   --- */
 /***************************** */

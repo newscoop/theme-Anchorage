@@ -13,8 +13,8 @@
                 <div id="main" class="span12">
                     <div class="row columns">
                         <div class="span8 column">
-                            <div id="main-content" class="single-page section-page">
-                                <div class="anchorage-form">
+                            <div id="main-content" class="password-page">
+                                <div class="anchorage-form well-form well">
                                     <form action="{{ $form->getAction() }}" class="zend_form" method="{{ $form->getMethod() }}">
                                         <fieldset>
                                             {{ if $form->isErrors() }}
@@ -43,7 +43,7 @@
                                                     {{ /if }}
                                              </dl>
                                             <div class="form-buttons right">
-                                                <input type="submit" id="submit" class="button" value="{{ #savePassword# }}" />
+                                                <input type="submit" id="submit" class="solid-button" value="{{ #savePassword# }}" />
                                             </div>
                                         </fieldset>
                                     </form>    

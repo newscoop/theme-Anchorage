@@ -42,12 +42,13 @@ hr{
     border-top: 1px dotted #b2b2b2;
     height: 1px;
 }
-
+.alert{
+    .rounded-corners(0px);
+}
 .alert-error{
     background: #a73a42;
     border:#86221e 1px solid;
     .box-shadow(0px,0px,0px,3px,#d3d9d6 );
-    .rounded-corners(0px);
     color:#e8dddd;
     .text-shadow(0px,0px,0px, #a70001);
     font-size: 12px;
@@ -940,15 +941,23 @@ hr{
 /* End Debate --- */
 
 
-
-
-
-
 /* --- Registration and Login Form */
 
 .well-form{
     .rounded-corners(0px);
     background: #fff;
+}
+
+.zend_form{
+    #submit{
+        .solid-button;
+    }
+}
+
+.dashboard-page{
+    .user-image{
+        margin-bottom: 15px;
+    }
 }
 
 /* End Registration and Login Form   --- */

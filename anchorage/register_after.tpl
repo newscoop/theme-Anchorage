@@ -13,7 +13,7 @@
                 <div id="main" class="span12">
                     <div class="row columns">
                         <div class="span8 column">
-                            <div id="main-content" class="single-page section-page">
+                            <div id="main-content" class="register-page">
                                 <div class="alert">
                                     <p>{{ #followTheSteps# }}</p>
                                     <p><b>{{ #thanksForRegistering# }}</b></p>

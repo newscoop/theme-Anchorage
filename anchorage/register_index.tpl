@@ -13,8 +13,8 @@
                 <div id="main" class="span12">
                     <div class="row columns">
                         <div class="span8 column">
-                            <div id="main-content" class="single-page section-page">
-                                <div class="anchorage-form well anchorage-register">
+                            <div id="main-content" class="register-page">
+                                <div class="anchorage-form well-form well">
                                     {{ $form }}
                                 </div>
                                 <script type="text/javascript">

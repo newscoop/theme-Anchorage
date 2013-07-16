@@ -13,7 +13,7 @@
                 <div id="main" class="span12">
                     <div class="row columns">
                         <div class="span8 column">
-                            <div id="main-content" class="single-page section-page">
+                            <div id="main-content" class="dashboard-page">
                             <h1>{{ #welcome# }} {{ $user->name }}</h1>
                                 <center>
                                     <span class="label">{{ #currentAvatar# }}</span><br>
@@ -21,7 +21,7 @@
                                         <img src="{{ include file="_tpl/user-image.tpl" user=$user width=140 height=210 }}" style="max-width: 100%" rel="resizable" />
                                     </figure>
                                 </center>
-                                <div class="anchorage-form well">
+                                <div class="anchorage-form well-form well">
                                     <link rel="stylesheet" href="{{ url static_file="_css/datepicker.css"}}">
                                     <script src="{{ url static_file='_js/vendor/bootstrap-datepicker.js'}}"></script>
                                     <script type="text/javascript">
