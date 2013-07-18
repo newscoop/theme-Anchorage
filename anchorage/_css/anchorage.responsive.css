@@ -25,7 +25,7 @@
     padding: 0;
   }
   #main-content {
-    padding: 15px;
+    padding: 20px 25px;
   }
   #footer .footer-widgets {
     background-position: center top;
@@ -54,6 +54,9 @@
   body {
     padding: 0;
   }
+  #main-content {
+    padding: 20px;
+  }
   #action-header {
     display: none;
   }
@@ -63,6 +66,10 @@
   .articles-list header,
   .articles-list .excerpt {
     width: 68%;
+  }
+  #footer .footer-widgets > .block {
+    padding-right: 10px;
+    padding-left: 10px;
   }
 }
 /* --- End screen resolution less than 620px */
