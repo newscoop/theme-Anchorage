@@ -39,7 +39,7 @@
                                 </section>
 
                                 <section id="premium-block-description" class="block">
-                                    <p><strong>{{ #advantages# }}:</strong> Nulla vitae elit libero, a pharetra augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit tempus porttitor.</p>
+                                    <p><strong>{{ #advantages# }}:</strong> To be able to access all articles, you have to a premium member. To find out more about premium membership, please click here.</p>
                                     <a href="{{ $view->url(['controller' => 'register', 'action' => 'index']) }}" class="solid-button">{{ #registerNow# }}</a>
                                 </section>
 

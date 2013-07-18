@@ -174,9 +174,8 @@ figure figcaption {
 }
 .featured-article h2 {
   font-size: 16px;
-  border-top: #9a9a9a 1px dotted;
-  padding-top: 5px;
-  margin-top: 20px;
+  padding-top: 2px;
+  margin-top: 10px;
 }
 .articles-list {
   position: relative;
@@ -200,7 +199,7 @@ figure figcaption {
 }
 .extra-articles {
   width: 48%;
-  min-height: 180px;
+  min-height: 140px;
 }
 .extra-articles h4 {
   margin-top: 15px;
@@ -235,6 +234,8 @@ figure figcaption {
   width: 185px;
   margin-right: 16px;
   float: left;
+  position: relative;
+  min-height: 290px;
 }
 #videos .video .title {
   padding: 10px 0px;
@@ -1325,7 +1326,7 @@ hr {
   margin-bottom: 10px;
 }
 #videos .video .read-more {
-  position: relative;
+  position: absolute;
   bottom: 0;
 }
 /* End Index --- */

@@ -6,7 +6,6 @@
                                     {{ list_articles length="3" ignore_issue="true" order="bypublishdate desc" }}
                                     <div class="link">
                                         <i class="icon-double-angle-right"></i>
-                                        <a class="dateline" href="{{ uri options='section' }}">{{ $gimme->article->section->name}}: </a>
                                         <a href="{{ uri options="article" }}"> {{ $gimme->article->name }}</a>
                                     </div>
                                     {{ /list_articles }}
