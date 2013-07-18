@@ -91,7 +91,7 @@
             $('.columns').equalHeights();
             $('.comment').equalHeights();
             $('#sidebar').height($('#sidebar-container').height());
-            $("#main-content,#sidebar").resize(function(e){
+            $(".container,#main-content,#sidebar").resize(function(e){
                 $('.columns').equalHeights();
                 $('#sidebar').height($('#sidebar-container').height());
             });

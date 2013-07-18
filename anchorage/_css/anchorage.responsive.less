@@ -9,6 +9,24 @@
 
 @media (min-width: 768px) and (max-width: 979px) {
 
+	#login-form{
+		.input-medium{
+			width: 80px;
+		}
+	}
+
+	.articles-list header, .articles-list .excerpt {
+	    width: 65%;
+	}
+
+	.extra-articles {
+	    width: 46%;
+	}
+
+	#videos .video {
+	    width: 137px;
+	}
+
 }
 
 /* --- End 768px to 979px screen resolution*/
@@ -18,19 +36,121 @@
 /* --- Landscape phone to portrait tablet */
 
 @media (min-width: 481px) and (max-width: 767px) {
+	body{
+		padding:0;
+	}
+
+	#main-content {
+	    padding: 15px;
+	}
+
+	#footer{
+	    .footer-widgets{
+	    	background-position: center top;
+	    	height: 100%;
+	        > .block{
+	        	text-align: center;
+	            margin-top:10px;
+	            margin-bottom:10px;
+	            a{
+	            	display: inline-block;
+	            	margin:0px;
+	            	font-size: 11px;
+	        	}
+	        }
+	    } 
+	}
+
+	#main > .row > .span8{
+		min-height: 0px !important;
+	}
+
+	.extra-articles{
+		display: none;
+	}
 
 }
 
 /* --- End 481px to 767px screen resolution */
+
+
+/* --- Begin screen resolution less than 620px */
+
+@media (max-width: 620px) {
+	body{
+		padding:0;
+	}
+	#action-header{
+		display: none;
+	}
+	#action-header-phone{
+		display: block !important;
+	}
+
+	.articles-list header,.articles-list .excerpt{
+	    width: 68%;
+	}
+
+}
+
+/* --- End screen resolution less than 620px */
+
 
 /* --- Begin screen resolution less than 480px */
 /* --- Landscape phones and down */
 
 @media (max-width: 480px) {
 
+	.articles-list header,.articles-list .excerpt{
+	    width: 100%;
+	}
+
+	.articles-list .secundary-thumb{
+		display: none !important;
+	}
+
+	#logo{
+		width: 100% !important;
+		margin:0 !important;
+		padding-left: 20%;
+		a{
+			display: block !important;
+		}
+	}
+
+	#footer{
+	    .footer-widgets{
+	    	background-position: center top;
+	    	height: 100%;
+	        > .block{
+	        	text-align: center;
+	            margin-top:10px;
+	            margin-bottom:10px;
+	            a{
+	            	display: inline-block;
+	            	margin:0px;
+	            	font-size: 11px;
+	        	}
+	        }
+	    } 
+	}
+
+	#map,.extra-articles{
+		display: none;
+	}
+
+	#main > .row > .span8{
+		min-height: 0px !important;
+	}
+
+	#action-header-phone{
+		display: none !important;
+	}
+
 }
 
 /* --- End screen resolution less than 480px */
+
 
 /* --- Begin screen resolution less than 380px */
 
@@ -43,7 +163,16 @@
 /* --- Begin screen resolution less than 360px */
 
 @media (max-width: 360px) {    
-
+	#logo{
+		padding-left: 18%;
+	}
+	.login-user-action{
+		a{
+			span{
+				display: none !important;
+			}
+		}
+	}
 }
 
 /* End screen resolution less than 360px --- */
@@ -51,7 +180,9 @@
 /* --- Begin screen resolution less than 320px */
 
 @media (max-width: 320px) {
-
+	#logo{
+		padding-left: 12%;
+	}
 }
 
 /* End screen resolution less than 320px --- */

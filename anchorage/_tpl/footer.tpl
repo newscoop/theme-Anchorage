@@ -7,19 +7,23 @@
                             {{ local }}
                             {{ set_current_issue }}
                             {{ list_sections }}
+                            {{ if $gimme->current_list->at_end }}
                             <a  href="{{ uri options="section" }}">{{ $gimme->section->name}}</a>
+                            {{else}}
+                            <a  href="{{ uri options="section" }}">{{ $gimme->section->name}} <span class="visible-phone">&nbsp;|&nbsp;</span></a>
+                            {{/if}}
                             {{ /list_sections }}
                             {{ /local }}
                         </div>
                         <div class="span3 block">
                             {{ list_articles ignore_issue="true" ignore_section="true" constraints="type is page" }}
-                            <a href="{{ url options="article" }}">{{ $gimme->article->name }}</a>
+                            <a href="{{ url options="article" }}">{{ $gimme->article->name }}<span class="visible-phone">&nbsp;|&nbsp;</span></a>
                             {{ /list_articles }}
                             <a href="/?tpl=6">{{ #archive# }}</a>
                         </div>                         
                         <div class="span3 block">
-                            <a target="_blank" href="http://twitter.com/sourcefabric ">{{ #followUs# }}</a>
-                            <a target="_blank"href="http://facebook.com/sourcefabric ">{{ #beOurFan# }}</a>
+                            <a target="_blank" href="http://twitter.com/sourcefabric ">{{ #followUs# }}<span class="visible-phone">&nbsp;|&nbsp;</span></a>
+                            <a target="_blank"href="http://facebook.com/sourcefabric ">{{ #beOurFan# }}<span class="visible-phone">&nbsp;|&nbsp;</span></a>
                             <a href="/en/static/rss">{{ #subscribeToOurFeed# }}</a>
                         </div>
                     </div>

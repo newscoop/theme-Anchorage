@@ -25,7 +25,7 @@
 {{ /list_articles }} 
 
                               	<!-- Begins Index Videos -->
-                                <section id="videos">
+                                <section id="videos" class="hidden-phone">
 
                                     <h4 class="section-title">{{ #latestVideos# }}</h4>
 
