@@ -84,7 +84,7 @@
                             </div>
                         </div>
                         <!-- Begins Sidebar -->
-                        <aside id="sidebar-container" class="span4 column">
+                        <aside id="sidebar-container" class="span4 column hidden-phone">
 
                             {{ include file="_tpl/sidebar-community.tpl" }}
                             

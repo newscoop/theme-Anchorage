@@ -1202,8 +1202,8 @@ hr {
   -webkit-border-radius: 0px;
   -khtml-border-radius: 0px;
   border: 0;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right: 18px;
 }
 #header #phone-menu .navbar-inner a {
   color: #fff;

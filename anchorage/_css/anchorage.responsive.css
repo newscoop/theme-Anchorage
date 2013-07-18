@@ -16,6 +16,18 @@
   #videos .video {
     width: 137px;
   }
+  .single-page .image {
+    width: 93%;
+  }
+  .single-page .image img {
+    width: 100%;
+  }
+  #comment-form .form-column-right {
+    margin-top: 0px !important;
+  }
+  #comment-form .form-column-right {
+    width: 90%;
+  }
 }
 /* --- End 768px to 979px screen resolution*/
 /* --- Begin 481px to 767px screen resolution */
@@ -49,6 +61,13 @@
   }
 }
 /* --- End 481px to 767px screen resolution */
+/* --- Begin screen resolution less than 680px */
+@media (max-width: 680px) {
+  #comment-form .form-column-right {
+    margin-top: 0px !important;
+  }
+}
+/* --- End screen resolution less than 680px */
 /* --- Begin screen resolution less than 620px */
 @media (max-width: 620px) {
   body {
@@ -66,6 +85,12 @@
   .articles-list header,
   .articles-list .excerpt {
     width: 68%;
+  }
+  .single-page .image {
+    width: 93%;
+  }
+  .single-page .image img {
+    width: 100%;
   }
   #footer .footer-widgets > .block {
     padding-right: 10px;
@@ -86,10 +111,13 @@
   #logo {
     width: 100% !important;
     margin: 0 !important;
-    padding-left: 20%;
+    padding-left: 23%;
   }
   #logo a {
     display: block !important;
+  }
+  .single-page .image {
+    width: 91%;
   }
   #footer .footer-widgets {
     background-position: center top;
@@ -115,11 +143,16 @@
   #action-header-phone {
     display: none !important;
   }
+  #comments-block .comment .comment-content {
+    width: 60%;
+  }
 }
 /* --- End screen resolution less than 480px */
 /* --- Begin screen resolution less than 380px */
 @media (max-width: 380px) {
-  
+  .single-page .image {
+    width: 89%;
+  }
 }
 /* End screen resolution less than 380px --- */
 /* --- Begin screen resolution less than 360px */
@@ -130,12 +163,18 @@
   .login-user-action a span {
     display: none !important;
   }
+  #comments-block .comment .comment-content {
+    width: 55%;
+  }
 }
 /* End screen resolution less than 360px --- */
 /* --- Begin screen resolution less than 320px */
 @media (max-width: 320px) {
   #logo {
     padding-left: 12%;
+  }
+  .single-page .image {
+    width: 84%;
   }
 }
 /* End screen resolution less than 320px --- */
