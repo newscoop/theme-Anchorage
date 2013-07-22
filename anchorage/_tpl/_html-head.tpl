@@ -53,11 +53,12 @@
     <script>window.jQuery || document.write('<script src=""><\/script>')</script>
      -->
     <!-- Vendor plugins -->
-    <script src="{{ url static_file="_js/vendor/jquery.zweatherfeed.min.js" }}"></script>
+    <script src="{{ url static_file="_js/bootstrap.min.js" }}"></script>
     <script src="{{ url static_file="_js/vendor/jQuery.equalHeights.js" }}"></script>
+    <script src="{{ url static_file="_js/vendor/jquery.zweatherfeed.min.js" }}"></script>
     <script src="{{ url static_file="_js/vendor/jquery.ba-resize.min.js" }}"></script>
     <script src="{{ url static_file="_js/vendor/jquery.timeago.js" }}"></script>
-    <script src="{{ url static_file="_js/bootstrap.min.js" }}"></script>
+    
 
     {{ if $gimme->template->name == 'article.tpl'}}
     <script src="{{ url static_file='_js/vendor/galleria/galleria-1.2.9.min.js'}}"></script>
@@ -91,7 +92,7 @@
             $('.columns').equalHeights();
             $('.comment').equalHeights();
             $('#sidebar').height($('#sidebar-container').height());
-            $(".container,#main-content,#sidebar").resize(function(e){
+            $(".container,#main-content,#sidebar-container").resize(function(e){
                 $('.columns').equalHeights();
                 $('#sidebar').height($('#sidebar-container').height());
             });

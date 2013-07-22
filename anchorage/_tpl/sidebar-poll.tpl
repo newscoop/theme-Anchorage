@@ -78,4 +78,5 @@
     {{ /if }}
     {{ /list_debates }}
     {{ /list_articles }}
+<div class="clearfix"></div>
 </div>
