@@ -28,6 +28,13 @@
   #comment-form .form-column-right {
     width: 90%;
   }
+  .comment-content {
+    width: 95% !important;
+    min-height: 0;
+  }
+  #comment-form .form-column-left {
+    width: 92% !important;
+  }
 }
 /* --- End 768px to 979px screen resolution*/
 /* --- Begin 481px to 767px screen resolution */
@@ -59,12 +66,20 @@
   .extra-articles {
     display: none;
   }
+  .comment-content {
+    width: 95% !important;
+    min-height: 0;
+  }
 }
 /* --- End 481px to 767px screen resolution */
 /* --- Begin screen resolution less than 680px */
 @media (max-width: 680px) {
   #comment-form .form-column-right {
     margin-top: 0px !important;
+  }
+  .comment-content {
+    width: 95% !important;
+    min-height: 0;
   }
 }
 /* --- End screen resolution less than 680px */
@@ -95,6 +110,20 @@
   #footer .footer-widgets > .block {
     padding-right: 10px;
     padding-left: 10px;
+  }
+  .form-horizontal .controls {
+    margin-left: 0px !important;
+  }
+  #comment-form .controls {
+    margin-left: 7px !important;
+  }
+  #comment-form .form-column-left {
+    width: 90% !important;
+  }
+  #comment-form .control-label {
+    text-align: left !important;
+    width: 100% !important;
+    padding-left: 7px;
   }
 }
 /* --- End screen resolution less than 620px */

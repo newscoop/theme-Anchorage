@@ -96,9 +96,6 @@
                 $('.columns').equalHeights();
                 $('#sidebar').height($('#sidebar-container').height());
             });
-            $(".comment").resize(function(e){
-                $('.comment').equalHeights();
-            });
 
             //solo para article
             $('.carousel').carousel();

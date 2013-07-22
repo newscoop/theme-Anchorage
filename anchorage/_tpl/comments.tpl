@@ -2,9 +2,18 @@
     {{ list_article_comments order="bydate desc" }}
     <div id="comment-{{$gimme->current_list->index}}" class="comment">
         <div class="comment-content">
+            <div class="author-phone hidden-desktop">  
+                {{ if $gimme->comment->user->identifier }}
+                <a href="http://{{ $gimme->publication->site }}/user/profile/{{ $gimme->comment->user->uname|urlencode }}" >{{ $gimme->comment->user->uname }}</a>
+                {{ else }}
+                <a href="#">{{ $gimme->comment->nickname }} ({{ #anonymous# }})</a>
+                {{ /if }}
+                |&nbsp;<span><time class="timeago" datetime="{{ $gimme->comment->submit_date }}">{{ $gimme->comment->submit_date }}</time></span>
+                <hr>
+            </div>
             {{ $gimme->comment->content }}
         </div>
-        <div class="comment-author">
+        <div class="comment-author visible-desktop">
             {{ if $gimme->comment->user->identifier }}
             <a href="http://{{ $gimme->publication->site }}/user/profile/{{ $gimme->comment->user->uname|urlencode }}" >{{ $gimme->comment->user->uname }}</a><br>
             {{ else }}
