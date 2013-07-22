@@ -96,7 +96,10 @@
                 $('.columns').equalHeights();
                 $('#sidebar').height($('#sidebar-container').height());
             });
-
+            $(window).resize(function(e){
+                $('#sidebar').height($('#sidebar-container').height());
+                $('.columns').equalHeights();
+            });
             //solo para article
             $('.carousel').carousel();
 

@@ -204,6 +204,14 @@
   #comments-block .comment .comment-content {
     width: 60%;
   }
+  .profile-page .profile-avatar,
+  .profile-page .profile-bio {
+    width: 100% !important;
+    text-align: center;
+  }
+  .profile-page .profile-information .information-column {
+    width: 100% !important;
+  }
 }
 /* --- End screen resolution less than 480px */
 /* --- Begin screen resolution less than 380px */

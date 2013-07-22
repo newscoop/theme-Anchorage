@@ -1,6 +1,6 @@
                             <div id="sidebar">
 
-                                <section id="most-read" class="block">
+                                <section id="most-read" class="block visible-desktop">
                                     <h4>{{ #mostRead# }}</h4>
 
                                     {{ local }} 
