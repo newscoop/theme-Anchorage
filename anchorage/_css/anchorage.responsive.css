@@ -22,6 +22,19 @@
   .single-page .image img {
     width: 100%;
   }
+  .section-page .section-thumb {
+    width: 93%;
+  }
+  .section-page .section-thumb img {
+    width: 100%;
+  }
+  .section-page .articles-list header {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .section-page .articles-list .excerpt {
+    width: 100%;
+  }
   #comment-form .form-column-right {
     margin-top: 0px !important;
   }
@@ -81,6 +94,9 @@
     width: 95% !important;
     min-height: 0;
   }
+  .section-page .section-thumb {
+    width: 53%;
+  }
 }
 /* --- End screen resolution less than 680px */
 /* --- Begin screen resolution less than 620px */
@@ -105,6 +121,19 @@
     width: 93%;
   }
   .single-page .image img {
+    width: 100%;
+  }
+  .section-page .section-thumb {
+    width: 93%;
+  }
+  .section-page .section-thumb img {
+    width: 100%;
+  }
+  .section-page .articles-list header {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .section-page .articles-list .excerpt {
     width: 100%;
   }
   #footer .footer-widgets > .block {
