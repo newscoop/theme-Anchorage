@@ -1,0 +1,6 @@
+Makefile
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+*.DS_Store
