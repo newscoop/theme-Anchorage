@@ -18,14 +18,14 @@
                                     {{ $form }}
                                 </div>
                                 <script type="text/javascript">
-                                $('.anchorage-register #email').change(function() {
+                                $('.zend_form #email').change(function() {
                                     $.post('{{ $view->url(['controller' => 'register', 'action' => 'check-email'], 'default') }}?format=json', {
                                         'email': $(this).val()
                                     }, function (data) {
                                         if (data.status) {
-                                            $('.anchorage-register #email').css('color', 'green');
+                                            $('.zend_form #email').css('color', 'green');
                                         } else {
-                                            $('.anchorage-register #email').css('color', 'red');
+                                            $('.zend_form #email').css('color', 'red');
                                         }
                                     }, 'json');
                                 }).keyup(function() {
@@ -37,7 +37,7 @@
                         <!-- Begins Sidebar -->
                         <aside id="sidebar-container" class="span4 column hidden-phone">
 
-                            {{ include "_tpl/sidebar-article.tpl" }}
+                            {{ include file="_tpl/sidebar-community.tpl" }}
                             
                         </aside>
                         <!-- / End Sidebar -->
