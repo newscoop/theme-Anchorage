@@ -219,6 +219,10 @@
   .single-page .image {
     width: 89%;
   }
+  .zend_form dt,
+  .zend_form dd {
+    width: 100%;
+  }
 }
 /* End screen resolution less than 380px --- */
 /* --- Begin screen resolution less than 360px */
