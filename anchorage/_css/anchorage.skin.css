@@ -400,6 +400,20 @@ h1.page-title {
   float: left;
   margin-right: 15px;
 }
+.single-page .share-buttons {
+  margin-bottom: 0px;
+}
+.single-page .share-buttons #twitter-button {
+  float: left;
+  width: 90px;
+}
+.single-page .share-buttons #facebook-button {
+  float: left;
+}
+.single-page .share-buttons #plus-button {
+  float: left;
+  width: 50px;
+}
 #comments-block {
   background: #c4c2c3;
   padding: 15px 10px;
@@ -1774,10 +1788,6 @@ hr {
 .single-page .icon-time,
 .single-page .icon-map-marker {
   color: #909090;
-}
-.single-page .share-buttons {
-  height: 25px;
-  margin-bottom: 0px;
 }
 .single-page hr {
   margin: 10px 0px;

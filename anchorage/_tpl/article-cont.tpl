@@ -97,18 +97,14 @@
 	    <div class="well share-buttons">
 
 	        <!--- Twitter button -->
-	        <div style="float:left; width:90px;">
+	        <div id="twitter-button">
 	            <a href="https://twitter.com/share" class="twitter-share-button" data-dnt="true">Tweet</a>
 	        </div>
 	        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 	        </script>
 
-	        <!--- Facebook button -->
-	        <div style="float:left; width:80px; margin-right:15px;">
-	            <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2F{{ $gimme->publication->site }}{{ uri }}&amp;send=false&amp;layout=standard&amp;width=80&amp;show_faces=false&amp;colorscheme=light&amp;action=like&amp;height=35&amp;appId=100924830001723" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:35px;" allowTransparency="true"></iframe>
-	        </div>
-	                <!--- Google+ button -->
-	        <div style="float:left; width:50px;">
+	        <!--- Google+ button -->
+	        <div id="plus-button">
 	            <div class="g-plusone" data-size="medium" data-annotation="inline" data-width="120"></div>
 	            <script type="text/javascript">
 	              (function() {
@@ -118,6 +114,13 @@
 	              })();
 	            </script>
 	        </div>
+
+	        <!--- Facebook button -->
+	        <div id="facebook-button">
+	            <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2F{{ $gimme->publication->site }}{{ uri }}&amp;send=false&amp;layout=standard&amp;width=285&amp;show_faces=false&amp;colorscheme=light&amp;action=like&amp;height=25&amp;appId=100924830001723" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:285px; height:25px;" allowTransparency="true"></iframe>
+	        </div>
+	        
+
 	        <div class="clearfix"></div>
 
 	    </div>
