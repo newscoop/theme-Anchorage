@@ -28,18 +28,24 @@
                                 <div class="profile-information">
                                     <h4>{{#information#}}</h4>
                                     <div class="information-column">
+                                        {{ if $profile['gender'] }}
                                         <div class="info-value">
                                             <span class="label">{{#gender#}}</span><br>
                                             <span class="value">{{ $profile['gender'] }}</span>
                                         </div>
+                                        {{ /if }}
+                                        {{ if $profile['organisation']}}
                                         <div class="info-value">
                                             <span class="label">{{ #organization# }}</span><br>
                                             <span class="value">{{ $profile['organisation']}}</span>
                                         </div>
+                                        {{ /if }}
+                                        {{ if $profile['website']}}
                                         <div class="info-value">
                                             <span class="label">{{ #website# }}</span><br>
                                             <span class="value"><a class="link-color" href="{{ $profile['website']}}" target="_blank" rel="nofollow">{{ $profile['website']|escape}}</a></span>
                                         </div>
+                                        {{ /if }}
                                         {{ if $profile['facebook'] }}
                                         <div class="info-value">
                                             <span class="label">Facebook</span><br>
@@ -52,12 +58,12 @@
                                             <span class="value"><a class="link-color" href="http://twitter.com/{{ $profile['twitter'] }}" rel="nofollow" target="_blank">{{ $profile['twitter'] }}</a></span>
                                         </div>
                                         {{ /if }}
-                                    </div>
-                                    <div class="information-column">
+                                        {{ if $profile['birth_date'] }}
                                         <div class="info-value">
                                             <span class="label">{{ #birthday# }}</span><br>
                                             <span class="value">{{ $profile['birth_date'] }}</span>
                                         </div>
+                                        {{ /if }}
                                         <div class="info-value">
                                             <span class="label">{{ #member# }}</span><br>
                                             <span class="value"><time class="timeago" datetime="{{ $user->created|date_format:'%Y-%m-%d' }} 06:00:00">{{ $user->created|date_format:'%Y-%m-%d' }} 06:00:00</time></span>

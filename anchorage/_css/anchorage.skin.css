@@ -682,10 +682,6 @@ h1.page-title {
 .profile-information .info-value {
   margin-bottom: 10px;
 }
-.profile-information .information-column {
-  display: inline-block;
-  width: 47%;
-}
 .profile-articles,
 .profile-comments {
   margin-top: 10px;
