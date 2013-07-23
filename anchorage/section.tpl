@@ -62,8 +62,8 @@
                                 {{ /if }}
 
                                 {{ /list_articles }}
-
-                                <img class="ad section-ad" src="{{ url static_file="_img/sourcefabric-ad2.png" }}">
+                                <a href="http://www.sourcefabric.org/en/newscoop/" target="_blank">
+                                <img class="ad section-ad" src="{{ url static_file="_img/sourcefabric-ad2.png" }}"></a>
 
                             </div>
                         </div>
