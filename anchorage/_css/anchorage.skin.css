@@ -1807,6 +1807,14 @@ hr {
   padding-bottom: 20px;
   border-bottom: #454545 dotted 1px;
 }
+.section-page .articles-list .label-important {
+  border-radius: 0px;
+  -ms-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -khtml-border-radius: 0px;
+  font-weight: 400 !important;
+}
 .pagination ul li a {
   color: #bc0000;
 }

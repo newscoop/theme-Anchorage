@@ -24,6 +24,9 @@
                                     </figure>
                                     {{/if}}
                                     <header class="{{ if $gimme->section->name != "Dialogue" }}pull-right{{else}}full-width{{/if}}">
+                                        {{ if !$gimme->article->content_accessible }}
+                                        <span class="label label-important"><i class="icon-lock"></i>&nbsp;{{ #premium# }}</span>
+                                        {{ /if }} 
                                         <h2><a href="{{ uri options="article" }}">{{ $gimme->article->name }}</a></h2>
                                     </header>
                                     <div class="excerpt pull-right">
