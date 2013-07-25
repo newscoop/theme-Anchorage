@@ -1711,6 +1711,23 @@ hr {
   margin-top: 5px;
   width: 100%;
 }
+#sidebar #map-widget {
+  color: #cecece;
+  background: #3f3d3e;
+  padding-bottom: 20px;
+}
+#sidebar #map-widget h4 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+#sidebar #map-widget .geomap_open_large_map a {
+  color: #fff;
+  font-size: 11px;
+}
+#sidebar #map-widget .geomap_open_large_map a:hover {
+  text-decoration: none;
+  color: #fff;
+}
 /* End Sidebar --- */
 /* --- Begin Footer */
 #footer {

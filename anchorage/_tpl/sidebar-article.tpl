@@ -23,6 +23,14 @@
                                 </section>
                                 {{ /if }}
 
+
+                                {{ if $gimme->article->has_map }} 
+                                <section id="map-widget" class="block">
+                                    <h4>{{ #map# }}</h4>        
+                                    {{ map show_locations_list="false" show_reset_link="false" width="100%" height="250" }}
+                                </section>
+                                {{ /if }}
+
                                 {{ local }} 
                                 {{ set_current_issue }} 
                                 {{ list_articles length="2" order="bypopularity desc"  ignore_section="true" constraints="public is off" }}
