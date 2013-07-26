@@ -4,30 +4,38 @@
                                   <h4>Community Feed</h4>
 
                                   {{ list_community_feeds length="10" }}
+
                                   {{ $created=$gimme->community_feed->created|date_format:"%Y-%m-%d" }}
                                   {{ $user=$gimme->community_feed->user }}
-                                  <div class="activity">
-                                    <div class="activity-action">
-                                      {{ if $gimme->community_feed->type == 'user-register' && $user->uname }}
-                                        <i class="icon-user"></i> {{#registered#}}:
-                                      {{ elseif $gimme->community_feed->type == 'comment-recommended' && $gimme->community_feed->comment->article }}
-                                        <i class="icon-comment"></i> {{#newCommentOn#}}
-                                      {{/if}}
+
+                                  {{ if $gimme->community_feed->type == 'user-register' && $user->uname }}
+                                    <div class="activity">
+                                      <div class="activity-action">
+                                          <i class="icon-user"></i> {{#registered#}}:
+                                      </div>
+                                      <div class="activity-title">
+                                          <a{{ if $user->is_active }} href="{{ $view->url(['username' => $user->uname], 'user') }}"{{ /if }}>{{ $user->first_name }} {{ $user->last_name }}</a>
+                                      </div>
+                                      <div class="date">
+                                        <time class="timeago" datetime="{{ $created}}">{{ $created}}</time>
+                                      </div>
                                     </div>
-                                    <div class="activity-title">
-                                     {{ if $gimme->community_feed->type == 'user-register' && $user->uname }}
-                                        <a{{ if $user->is_active }} href="{{ $view->url(['username' => $user->uname], 'user') }}"{{ /if }}>{{ $user->first_name }} {{ $user->last_name }}</a>
-                                      {{ elseif $gimme->community_feed->type == 'comment-recommended' && $gimme->community_feed->comment->article }}
-                                        <a href="{{ $gimme->community_feed->comment->article->url }}">{{ $gimme->community_feed->comment->article->title }}</a>
-                                      {{/if}}
+
+                                  {{ elseif $gimme->community_feed->type == 'comment-recommended' && $gimme->community_feed->comment->article }}
+                                    <div class="activity">
+                                      <div class="activity-action">
+                                          <i class="icon-comment"></i> {{#newCommentOn#}}
+                                      </div>
+                                      <div class="activity-title">
+                                          <a href="{{ $gimme->community_feed->comment->article->url }}">{{ $gimme->community_feed->comment->article->title }}</a>
+                                      </div>
+                                      <div class="date">
+                                        <time class="timeago" datetime="{{ $created}}">{{ $created}}</time>
+                                      </div>
                                     </div>
-                                    <div class="date">
-                                      <time class="timeago" datetime="{{ $created}}">{{ $created}}</time>
-                                    </div>
-                                  </div>
+                                  {{/if}}
+
                                   {{ /list_community_feeds }}
-
-
                                 </section>
 
                                 <section id="premium-block" class="block">
