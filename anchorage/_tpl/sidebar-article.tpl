@@ -24,7 +24,7 @@
                                 {{ /if }}
 
 
-                                {{ if $gimme->article->has_map }} 
+                                {{ if $gimme->article->has_map && $gimme->article->type_name == "news" }} 
                                 <section id="map-widget" class="block">
                                     <h4>{{ #map# }}</h4>        
                                     {{ map show_locations_list="false" show_reset_link="false" width="100%" height="250" }}

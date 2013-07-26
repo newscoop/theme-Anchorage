@@ -3,24 +3,30 @@
                                 <section id="community-feed" class="block">
                                   <h4>Community Feed</h4>
 
-                                  {{ local }}
-                                  {{ set_current_issue }}
-                                  {{ list_articles length="10" order="byLastComment desc" constraints="type is news" }}
-                                  {{ list_article_comments length="1" order="bydate desc"}}
+                                  {{ list_community_feeds length="10" }}
+                                  {{ $created=$gimme->community_feed->created|date_format:"%Y-%m-%d" }}
+                                  {{ $user=$gimme->community_feed->user }}
                                   <div class="activity">
                                     <div class="activity-action">
-                                      <i class="icon-comment"></i> {{ #newCommentOn# }}
+                                      {{ if $gimme->community_feed->type == 'user-register' && $user->uname }}
+                                        <i class="icon-user"></i> {{#registered#}}:
+                                      {{ elseif $gimme->community_feed->type == 'comment-recommended' && $gimme->community_feed->comment->article }}
+                                        <i class="icon-comment"></i> {{#newCommentOn#}}
+                                      {{/if}}
                                     </div>
                                     <div class="activity-title">
-                                      <a href="{{ uri options="article" }}">{{ $gimme->article->name }}</a>
+                                     {{ if $gimme->community_feed->type == 'user-register' && $user->uname }}
+                                        <a{{ if $user->is_active }} href="{{ $view->url(['username' => $user->uname], 'user') }}"{{ /if }}>{{ $user->first_name }} {{ $user->last_name }}</a>
+                                      {{ elseif $gimme->community_feed->type == 'comment-recommended' && $gimme->community_feed->comment->article }}
+                                        <a href="{{ $gimme->community_feed->comment->article->url }}">{{ $gimme->community_feed->comment->article->title }}</a>
+                                      {{/if}}
                                     </div>
                                     <div class="date">
-                                      <time class="timeago" datetime="{{ $gimme->comment->submit_date }}">{{ $gimme->comment->submit_date}}</time>
+                                      <time class="timeago" datetime="{{ $created}}">{{ $created}}</time>
                                     </div>
                                   </div>
-                                  {{ /list_article_comments }}
-                                  {{ /list_articles }}
-                                  {{ /local }}
+                                  {{ /list_community_feeds }}
+
 
                                 </section>
 
@@ -29,8 +35,8 @@
                                 </section>
 
                                 <section id="premium-block-description" class="block">
-                                    <p><strong>Advantages:</strong> Nulla vitae elit libero, a pharetra augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit tempus porttitor.</p>
-                                    <a href="#" class="solid-button">Register Now</a>
+                                    <p><strong>{{ #advantages# }}:</strong> To be able to access all articles, you have to a premium member. To find out more about premium membership, please click here.</p>
+                                    <a href="{{ $view->url(['controller' => 'register', 'action' => 'index']) }}" class="solid-button">{{ #registerNow# }}</a>
                                 </section>
 
                                 <section id="extra" class="block">
