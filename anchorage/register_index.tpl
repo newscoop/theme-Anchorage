@@ -14,6 +14,7 @@
                     <div class="row columns">
                         <div class="span8 column">
                             <div id="main-content" class="register-page">
+                                <br>
                                 <div class="anchorage-form well-form well">
                                     {{ $form }}
                                 </div>

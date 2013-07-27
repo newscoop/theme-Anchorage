@@ -127,7 +127,7 @@ figure figcaption {
   background: #f2f2f2;
 }
 #main-content {
-  padding: 15px 0px 15px 15px;
+  padding: 0px 0px 15px 15px;
 }
 /* End General Content Elements --- */
 /* --- Begin Index */
@@ -170,6 +170,7 @@ figure figcaption {
 }
 .featured-article {
   margin-bottom: 20px;
+  padding-top: 15px;
 }
 .featured-article h2 {
   font-size: 16px;
@@ -247,6 +248,7 @@ figure figcaption {
   -webkit-box-shadow: -1px 0px 0px 0px #ffffff;
   -moz-box-shadow: -1px 0px 0px 0px #ffffff;
   box-shadow: -1px 0px 0px 0px #ffffff;
+  padding-bottom: 15px;
 }
 #sidebar > .block {
   padding: 5px 15px 5px 15px;
@@ -388,6 +390,7 @@ figure figcaption {
 h1.page-title {
   font-size: 20px;
   margin-top: 0px;
+  padding-top: 15px;
   line-height: 30px;
 }
 .single-page p {
@@ -594,6 +597,11 @@ h1.page-title {
 }
 /* End Single Page --- */
 /* --- Begin Section page */
+.section-page .articles-list {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin-bottom: 0px;
+}
 .section-page .articles-list .section-thumb {
   background: #fff;
   padding: 15px;

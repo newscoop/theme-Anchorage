@@ -14,6 +14,7 @@
                     <div class="row columns">
                         <div class="span8 column">
                             <div id="main-content" class="single-page section-page">
+                                <br>
                                 <div class="alert alert-info">
                                     <h5 class="checkHeading">{{ #weSentYouAnEmail# }}</h5>
                                     <p>{{ #pleaseCheckYourInbox# }}</p>

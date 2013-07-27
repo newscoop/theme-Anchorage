@@ -14,7 +14,7 @@
                     <div class="row columns">
                         <div class="span8 column">
                             <div id="main-content" class="single-page profile-page">
-
+                                <br>
                                 <div class="profile-avatar">
                                     <img src="{{ include file='_tpl/user-image.tpl' user=$user width=150 height=130 }}" alt="{{#profilePicture#}} ">
                                     <h1 class="page-title">{{ if $profile['first_name_public'] }}{{ $user->first_name }}{{ /if }} {{ if $profile['last_name_public'] }} {{ $user->last_name }}{{ /if }} {{ if !$profile['first_name_public'] && !$profile['last_name_public'] }}{{$user->uname}}{{ /if }}</h1>

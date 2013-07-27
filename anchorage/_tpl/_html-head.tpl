@@ -56,7 +56,6 @@
     <script src="{{ url static_file="_js/bootstrap.min.js" }}"></script>
     <script src="{{ url static_file="_js/vendor/jQuery.equalHeights.js" }}"></script>
     <script src="{{ url static_file="_js/vendor/jquery.zweatherfeed.min.js" }}"></script>
-    <script src="{{ url static_file="_js/vendor/jquery.ba-resize.min.js" }}"></script>
     <script src="{{ url static_file="_js/vendor/jquery.timeago.js" }}"></script>
     
 
@@ -67,6 +66,31 @@
     {{/if}}
 
     <script type="text/javascript">
+
+        var autoheight = function(){
+            // set height to auto to prevent fixed height
+            $(arguments).each(function(n, elem){
+                $(elem).css('height', 'auto');
+            });
+
+            // get max height
+            var max_height = Math.max.apply(
+                Math, $(arguments).map(function(n, elem){
+                   return $(elem).outerHeight();
+                }).get()
+            );
+
+            // set height to all elements
+            $(arguments).each(function(n, elem){
+                $(elem).height(max_height);
+            });          
+        }
+
+        $(window).load(function(){
+            autoheight("#main-content", "#sidebar");
+        });
+        
+
         $(document).ready(function () {
             $('#weather').weatherfeed(['GMXX0007'],{
                 unit: 'f',
@@ -82,24 +106,22 @@
                 link: true
             });
             
+            $('.comment').equalHeights();
+
             // increase search form on focus
             $('.search-query').focus(function(){
                     $(this).addClass('big-search');
                 }
-            );
+            );                       
 
-            // Equal heights in internal column divs
-            $('.columns').equalHeights();
-            $('.comment').equalHeights();
-            $('#sidebar').height($('#sidebar-container').height());
-            $(".container,#main-content,#sidebar-container").resize(function(e){
-                $('.columns').equalHeights();
-                $('#sidebar').height($('#sidebar-container').height());
+            // set same height to main-content and sidebar
+            autoheight("#main-content", "#sidebar");
+
+            // binding resize of window
+            $(window).resize(function(){
+                autoheight("#main-content", "#sidebar");                
             });
-            $(window).resize(function(e){
-                $('#sidebar').height($('#sidebar-container').height());
-                $('.columns').equalHeights();
-            });
+
             //solo para article
             $('.carousel').carousel();
 
