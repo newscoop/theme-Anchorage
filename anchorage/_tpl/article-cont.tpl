@@ -133,6 +133,7 @@
 	{{/if}}
 
 {{ else }}
-    <div class="alert">{{ #infoOnLockedArticles# }}</div>
+	<br>
+    <div class="alert alert-error">{{ #infoOnLockedArticles# }}</div>
 {{ /if }}
 

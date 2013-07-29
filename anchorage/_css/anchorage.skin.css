@@ -795,6 +795,15 @@ h1.page-title {
 .zend_form #submit-element {
   margin-bottom: 10px;
 }
+.zend_form #attributes-email_public-label,
+.zend_form #attributes-email_public-element,
+.zend_form #newsletter-label,
+.zend_form #newsletter-element,
+.zend_form #newsletter-subscriber-label,
+.zend_form #newsletter-subscriber-element,
+.zend_form #fieldset-newsletter {
+  display: none;
+}
 /* End Registration and Login Form --- */
 /***************************** */
 /******** End Layout ********* */
