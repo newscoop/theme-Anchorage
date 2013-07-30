@@ -1,5 +1,3 @@
-        <!-- Vendor plugins -->
-
         <!-- Google analytics block -->
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];

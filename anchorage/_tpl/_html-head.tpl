@@ -38,26 +38,27 @@
     <!-- RSS & Pingback -->
     <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://{{ $gimme->publication->site }}/en/static/rss/">
     
-    <link rel="shortcut icon" href="">
-    <link rel="apple-touch-icon" href="">
+    <link rel="shortcut icon" href="{{ url static_file="_img/favicon.png" }}">
+    <link rel="apple-touch-icon" href="{{ url static_file="_img/favicon.png" }}">
     
     <!--[if lt IE 9]>
        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-       <script>window.html5 || document.write('<script src=""><\/script>')</script>
+       <script>window.html5 || document.write('<script src="{{ url static_file='_js/vendor/html5shiv.js'}}"><\/script>')</script>
     <![endif]-->
     
     <!-- jQuery Library -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    
-    <!--
-    <script>window.jQuery || document.write('<script src=""><\/script>')</script>
-     -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{ url static_file='_js/vendor/jquery-1.9.1.min.js'}}"><\/script>')
+    </script>
+
     <!-- Vendor plugins -->
-    <script src="{{ url static_file="_js/bootstrap.min.js" }}"></script>
+    <script src="{{ url static_file="_js/vendor/bootstrap.min.js" }}"></script>
     <script src="{{ url static_file="_js/vendor/jQuery.equalHeights.js" }}"></script>
     <script src="{{ url static_file="_js/vendor/jquery.zweatherfeed.min.js" }}"></script>
     <script src="{{ url static_file="_js/vendor/jquery.timeago.js" }}"></script>
-    
+
+    <!-- Theme custom functions and plugins configuration -->
+    <script src="{{ url static_file="_js/anchorage.js" }}"></script>
 
     {{ if $gimme->template->name == 'article.tpl'}}
     <script src="{{ url static_file='_js/vendor/galleria/galleria-1.2.9.min.js'}}"></script>
@@ -65,75 +66,4 @@
     <script src="{{ url static_file='_js/vendor/flowplayer/flowplayer.min.js' }}"></script>
     {{/if}}
 
-    <script type="text/javascript">
-
-        var autoheight = function(){
-            // set height to auto to prevent fixed height
-            $(arguments).each(function(n, elem){
-                $(elem).css('height', 'auto');
-            });
-
-            // get max height
-            var max_height = Math.max.apply(
-                Math, $(arguments).map(function(n, elem){
-                   return $(elem).outerHeight();
-                }).get()
-            );
-
-            // set height to all elements
-            $(arguments).each(function(n, elem){
-                $(elem).height(max_height);
-            });          
-        }
-
-        $(window).load(function(){
-            autoheight("#main-content", "#sidebar");
-        });
-        
-
-        $(document).ready(function () {
-            $('#weather').weatherfeed(['GMXX0007'],{
-                unit: 'f',
-                image: true,
-                country: true,
-                highlow: false,
-                wind: false,
-                humidity: false,
-                visibility: true,
-                sunrise: true,
-                sunset: true,
-                forecast: false,
-                link: true
-            });
-            
-            $('.comment').equalHeights();
-
-            // increase search form on focus
-            $('.search-query').focus(function(){
-                    $(this).addClass('big-search');
-                }
-            );                       
-
-            // set same height to main-content and sidebar
-            autoheight("#main-content", "#sidebar");
-
-            // binding resize of window
-            $(window).resize(function(){
-                autoheight("#main-content", "#sidebar");                
-            });
-
-            //solo para article
-            $('.carousel').carousel();
-
-            // initialize timeago plugin for dates
-            $(".timeago").timeago();
-
-            // Poll Ajaxified
-            $('#poll-button').click(function(){
-              $.post($('form[name=debate]').attr("action"),$('form[name=debate]').serialize(),function(data){$('#poll').html(data);});
-              return false;
-            }); 
-
-        });
-    </script>
 </head>
