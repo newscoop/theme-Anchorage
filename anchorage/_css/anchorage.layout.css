@@ -98,6 +98,10 @@ figure figcaption {
 #header #action-header-phone {
   display: none;
 }
+#header .user-buttons {
+  float: right;
+  margin-right: 15px;
+}
 #header .social-links {
   width: 24%;
   margin-left: 18px;
@@ -143,11 +147,9 @@ figure figcaption {
   position: absolute;
   top: 0;
   left: 0px;
-  background: #333;
   color: #fff;
   font-size: 11px;
   padding: 0px 15px;
-  border-left: #626262 15px solid;
 }
 .articles .featured-thumb .landing-title b {
   text-transform: capitalize;
