@@ -56,6 +56,17 @@
                                     <a href="{{ $view->url(['controller' => 'auth', 'action' =>'logout'], 'default') }}" class="btn form-button"><i class="icon-chevron-right"></i>{{ #logout# }}</a>
                                  
                                 </section>
+                                {{ if !$gimme->user->subscription->is_valid && !$gimme->user->is_admin }}
+                                <section id="premium-block" class="block">
+                                    <h4>{{ #notAPremiumMember# }}</h4>
+                                </section>
+
+                                <section id="premium-block-description" class="block">
+                                    <p><strong>{{ #advantages# }}:</strong> To be able to access all articles, you have to a premium member. To find out more about premium membership, please click here.</p>
+                                    <a href="{{ $view->url(['controller' => 'register', 'action' => 'index']) }}" class="solid-button">{{ #registerNow# }}</a>
+                                </section>
+                                {{/if}}
+
 
                                 {{/if}}
 
