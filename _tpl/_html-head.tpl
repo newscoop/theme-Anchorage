@@ -46,7 +46,7 @@
     <link rel="apple-touch-icon" href="{{ url static_file="_img/favicon.png" }}">
     
     <!--[if lt IE 9]>
-       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
        <script>window.html5 || document.write('<script src="{{ url static_file='_js/vendor/html5shiv.js'}}"><\/script>')</script>
     <![endif]-->
     

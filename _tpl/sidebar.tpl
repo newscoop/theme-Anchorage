@@ -30,7 +30,7 @@
                                       </div>
                                       <div class="control-group">
                                         <div class="controls">
-                                            <a href="{{ $view->url(['controller' => 'auth', 'action' => 'password-restore']) }}">{{ #recoverYourPassword# }}</a>
+                                            <a id="recover-link" href="{{ $view->url(['controller' => 'auth', 'action' => 'password-restore']) }}">{{ #recoverYourPassword# }}</a>
                                         </div>
                                       </div>
                                     </form>

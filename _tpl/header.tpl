@@ -26,7 +26,7 @@
                     </div>
 
                     <div class="span12 banner">
-                       <hgroup>
+                       <hgroup id="main-logo">
                             <h1 id="logo">                  
                                 <a href="/">
                                     <img  class="pull-left" src="{{ url static_file="_img/logo.png"}} " alt="">

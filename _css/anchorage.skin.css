@@ -90,7 +90,7 @@ figure figcaption {
   background-image: linear-gradient(#ffffff, #ffffff 75%, #f4f4f4);
 }
 #header .banner .action-header {
-  width: 25%;
+  width: 35%;
   text-align: center;
   line-height: 82px;
   color: #ababab;
@@ -163,9 +163,6 @@ figure figcaption {
 .articles .excerpt {
   font-size: 13px;
 }
-.articles .article-links {
-  clear: both;
-}
 .articles .article-links a {
   display: block;
   margin-right: 10px;
@@ -182,6 +179,7 @@ figure figcaption {
 }
 .articles-list {
   position: relative;
+  clear: both;
   margin-bottom: 15px;
 }
 .articles-list .secundary-thumb {
@@ -196,6 +194,7 @@ figure figcaption {
 .articles-list header,
 .articles-list .excerpt {
   width: 75%;
+  position: relative;
 }
 .articles-list h2 {
   margin-top: 5px;

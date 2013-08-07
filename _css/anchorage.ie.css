@@ -1,4 +1,37 @@
 /* lte IE 7*/
+
 #graph{
 	*display: none !important;
+}
+
+#main-logo{
+   *width: 50%; 
+   *float: left;
+}
+
+#sidebar #login-form .input-medium {
+    *margin-left: -100px;
+}
+
+#sidebar #login-form .form-button{
+	*margin-left: -90px;
+}
+
+#sidebar #login-form #recover-link{
+	*margin-left: -130px;
+}
+
+#sidebar .weatherLink a{
+	*display: none;
+}
+
+.articles-list .secundary-thumb {
+
+    *float: left;
+    *position: static;
+}
+
+
+.articles-button .icon-double-angle-right {
+    *float: left;
 }
