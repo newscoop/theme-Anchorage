@@ -42,9 +42,7 @@
 	            <p>{{ if $gimme->author->user->defined }}<a href="{{ $view->url(['username' => $gimme->author->user->uname], 'user') }}" class="link-color">{{ /if }}{{ $gimme->author->name }}{{ if $gimme->author->user->defined }}</a>{{ /if }}</p> 
 	        	<p >{{ $gimme->author->biography->text|strip_tags:false|truncate:200 }}</p>
         	</div>
-            <figure class="pull-left">
-              <img rel="resizable" alt="{{ $gimme->author->name }}" src="{{ $gimme->author->picture->imageurl }}" width=97 height=97 />
-            </figure>
+            <img class="pull-left" alt="{{ $gimme->author->name }}" src="{{ $gimme->author->picture->imageurl }}" width="97" height="97" style="width:97px ;height:100%;" />
             <div class="clearfix"></div>
         </div>
         {{ /if }}
@@ -62,9 +60,7 @@
 	            <p>{{ if $gimme->author->user->defined }}<a class="link-color" href="{{ $view->url(['username' => $gimme->author->user->uname], 'user') }}">{{ /if }}{{ $gimme->author->name }}{{ if $gimme->author->user->defined }}</a>{{ /if }}</p>
 	        	<p>{{ $gimme->author->biography->text|strip_tags:false|truncate:200 }}</p>
         	</div>
-            <figure class="pull-right">
-              <img rel="resizable" alt="{{ $gimme->author->name }}" src="{{ $gimme->author->picture->imageurl }}" width=97 height=97 />
-            </figure>
+            <img class="pull-right" alt="{{ $gimme->author->name }}" src="{{ $gimme->author->picture->imageurl }}" width="97" height="97" style="width:97px ;height:100%;" />
             <div class="clearfix"></div>            
         </div>
         {{ /if }}
