@@ -90,10 +90,10 @@
             // // set same height to main-content and sidebar
             autoheight("#main-content", "#sidebar");
 
-            // // binding resize of window, set the same height after resize
-            //$(window).resize(function(){
-            //    autoheight("#main-content", "#sidebar");                
-            //});
+            // binding resize of window, set the same height after resize
+            $(window).resize(function(){
+                autoheight("#main-content", "#sidebar");                
+            });
 
             // // require for carouser sidebar on articles
             $('.carousel').carousel();
