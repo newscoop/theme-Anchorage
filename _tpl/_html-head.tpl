@@ -18,7 +18,14 @@
     <link rel="stylesheet" href="{{ url static_file="_css/bootstrap.min.css" }}">
     <link rel="stylesheet" href="{{ url static_file="_css/anchorage.skin.css" }}">
     <link rel="stylesheet" href="{{ url static_file="_css/anchorage.responsive.css" }}">
-    <link rel="stylesheet" href="{{ url static_file="_css/font-awesome.min.css" }}">
+    <link rel="stylesheet" href="{{ url static_file="_css/font-awesome.css" }}">
+
+    <!--[if lte IE 9]>
+       <link rel="stylesheet" href="{{ url static_file="_css/anchorage.ie.css" }}">
+    <![endif]-->
+    <!--[if IE 7]>
+       <link rel="stylesheet" href="{{ url static_file="_css/font-awesome-ie7.css" }}">
+    <![endif]-->
 
     {{ if $gimme->article->defined }}{{* Open Graph protocol metatags for Facebook sharing *}}
     <meta property="og:title" content="{{$gimme->article->name|html_entity_decode|regex_replace:'/&(.*?)quo;/':'&quot;'}}" />
@@ -30,10 +37,7 @@
     <meta property="og:image" content="{{ $gimme->article->image->imageurl }}" />
     {{ /list_article_images }}
     {{ /if }}
-    
-    <!--[if lte IE 9]>
-       <link rel="stylesheet" href="">
-    <![endif]-->
+
     
     <!-- RSS & Pingback -->
     <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://{{ $gimme->publication->site }}/en/static/rss/">

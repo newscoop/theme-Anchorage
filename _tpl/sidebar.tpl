@@ -2,7 +2,9 @@
 
                                 <section id="graph" class="block visible-desktop">
                                     <h4>{{ #financialGraph# }}</h4>
+                                    
                                     <script src="//www.gmodules.com/ig/ifr?url=http://hosting.gmodules.com/ig/gadgets/file/100840413740199312943/StockQuotes.xml&amp;up_stockList=%5EIXIC%2C%5EGSPC%2C%5EN225%2C%5EHSI%2C%5ESTI%2C%5EFTSE%2C%5EGDAXI%2C%5EFCHI&amp;up_chart_bool=1&amp;up_font_size=11&amp;up_symbol_bool=0&amp;up_chart_period=1&amp;synd=open&amp;w=260&amp;h=300&amp;title=&amp;border=%23ffffff%7C3px%2C1px+solid+%23999999&amp;output=js"></script>
+                                    
                                 </section>
 
                                 {{ if !$gimme->user->logged_in}}
