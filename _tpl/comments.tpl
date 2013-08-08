@@ -53,7 +53,7 @@
                     </div>
                 </div>
                 <div class="control-group">
-                    <div class="controls">
+                    <div class="controls captcha">
                         {{ recaptcha }}
                     </div>
                 </div>

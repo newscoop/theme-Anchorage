@@ -512,7 +512,6 @@ h1.page-title {
 .article_rating {
   font: 21px;
   width: 100%;
-  float: left;
   padding: 10px 5px 8px 5px;
 }
 .article_rating h4 {

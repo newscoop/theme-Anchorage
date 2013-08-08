@@ -43,7 +43,7 @@
    		Galleria.loadTheme('{{ url static_file='_js/vendor/galleria/themes/classic/galleria.classic.min.js'}}');
     	Galleria.run('#gallery');
 		Galleria.configure({
-		    imageCrop: true,
+		    imageCrop: true
 		});
   	</script>
 
