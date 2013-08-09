@@ -417,6 +417,9 @@ h1.page-title {
   float: left;
   width: 50px;
 }
+.single-page .subtitle p {
+  font-size: 18px;
+}
 #comments-block {
   background: #c4c2c3;
   padding: 15px 10px;

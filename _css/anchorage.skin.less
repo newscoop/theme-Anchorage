@@ -893,6 +893,31 @@ hr{
     .solid-button{
         font-size: 11px;
     }
+    #subtitle-links{
+        li{
+            background: #fff;
+            border-left: @dark-color + 40 3px solid;
+        }
+        li.active{
+            border-left: @main-color + 35 3px solid;
+            a{
+                background: #f9f6ed;
+                font-weight: bold;
+            }
+        }
+        li:first-child > a,li:last-child > a{
+            .rounded-corners(0px);
+        }
+        li a{
+            font-size: 13px;
+            .link-color;
+            .trans(background,0.5s);
+            &:hover{
+                .link-color;
+                .trans(background,0.5s);
+            }
+        }
+    }
 }
 
 #comments-block{

@@ -418,6 +418,9 @@ h1.page-title {
   float: left;
   width: 50px;
 }
+.single-page .subtitle p {
+  font-size: 18px;
+}
 #comments-block {
   background: #c4c2c3;
   padding: 15px 10px;
@@ -1827,6 +1830,42 @@ hr {
 }
 .single-page .solid-button {
   font-size: 11px;
+}
+.single-page #subtitle-links li {
+  background: #fff;
+  border-left: #807e7f 3px solid;
+}
+.single-page #subtitle-links li.active {
+  border-left: #df2323 3px solid;
+}
+.single-page #subtitle-links li.active a {
+  background: #f9f6ed;
+  font-weight: bold;
+}
+.single-page #subtitle-links li:first-child > a,
+.single-page #subtitle-links li:last-child > a {
+  border-radius: 0px;
+  -ms-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -khtml-border-radius: 0px;
+}
+.single-page #subtitle-links li a {
+  font-size: 13px;
+  color: #bc0000;
+  text-decoration: none;
+  transition: background 0.5s;
+  -moz-transition: background 0.5s;
+  -webkit-transition: background 0.5s;
+  -o-transition: background 0.5s;
+}
+.single-page #subtitle-links li a:hover {
+  color: #bc0000;
+  text-decoration: none;
+  transition: background 0.5s;
+  -moz-transition: background 0.5s;
+  -webkit-transition: background 0.5s;
+  -o-transition: background 0.5s;
 }
 #comments-block .comment .comment-author a {
   color: #bc0000;
