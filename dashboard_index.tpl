@@ -20,6 +20,7 @@
                                     <figure class="user-image">
                                         <img src="{{ include file="_tpl/user-image.tpl" user=$user width=140 height=210 }}" style="max-width: 100%" rel="resizable" />
                                     </figure>
+                                    <a href="{{ $view->url(['username' => $gimme->user->uname], 'user') }}" class="solid-button">{{#viewMyProfile#}}</a>
                                 </center>
                                 <div class="anchorage-form well-form well">
                                     <link rel="stylesheet" href="{{ url static_file="_css/datepicker.css"}}">

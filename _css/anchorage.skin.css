@@ -714,9 +714,10 @@ h1.page-title {
   font-weight: 400;
   margin-top: 10px;
 }
+.dashboard-page .well-form {
+  margin-top: 20px;
+}
 /* End Profile --- */
-/* --- Begin Debate */
-/* End Debate --- */
 /* --- Begin Registration and Login Form */
 .anchorage-form {
   padding-right: 30px;
