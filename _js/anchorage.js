@@ -6,28 +6,31 @@
         jQuery.browser.msie=true;jQuery.browser.version=RegExp.$1;}})();
 
         if ( $.browser.msie && $.browser.version < 8 ) {
+          //definition for autoheight function for IE 7
+          var autoheight = function(){
+             //set height to auto to prevent fixed height
+             $(arguments).each(function(n, elem){
+                 $(elem).css('height', 'auto');
+             });
 
-            // Custom function to get equal heights of a set of divs
-            var autoheight = function(){
+             // get max height
+             var lista = $(arguments).map(function(n, elem){
+                            return $(elem).outerHeight();
+                          }).get();
 
-                // set height to auto to prevent fixed height
-                // $(arguments).each(function(n, elem){
-                //     $(elem).css('height', 'auto');
-                // });
+             var max_height = Math.max.apply(null, lista);
 
-                // // get max height
-                // var max_height = Math.max.apply(
-                //     null, $(arguments).map(function(n, elem){
-                //        return $(elem).outerHeight();
-                //     }).get()
-                // );
-
-                // // set height to all elements
-                // $(arguments).each(function(n, elem){
-                //     $(elem).height(max_height);
-                // });            
-            }
-
+             // set height to all elements
+             for (var i=0; i<arguments.length; i++){
+               //go home IE 7 you're drunk
+               var css_height = $(arguments[i]).outerHeight(); 
+               if (css_height < max_height){
+                 //ugly hack for IE if you put less than 15 
+                 //it produces an infinite loop
+                 $(arguments[i]).height(max_height-15);
+               }
+             }
+          }
         } else{
             var autoheight = function(){
                 // set height to auto to prevent fixed height
@@ -92,7 +95,7 @@
 
             // binding resize of window, set the same height after resize
             $(window).resize(function(){
-                autoheight("#main-content", "#sidebar");                
+              autoheight("#main-content", "#sidebar");                
             });
 
             // // require for carouser sidebar on articles
