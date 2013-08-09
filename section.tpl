@@ -24,7 +24,7 @@
                                     </figure>
                                     {{/if}}
                                     <header id="article-title" class="{{ if $gimme->section->name != "Dialogue" }}pull-right{{else}}full-width{{/if}}">
-                                        {{ if !$gimme->article->content_accessible }}
+                                        {{ if !$gimme->article->is_public }}
                                         <span class="label label-important"><i class="icon-lock"></i>&nbsp;{{ #premium# }}</span>
                                         {{ /if }} 
                                         <h2><a href="{{ uri options="article" }}">{{ $gimme->article->name }}</a></h2>
