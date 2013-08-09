@@ -420,6 +420,9 @@ h1.page-title {
 .single-page .subtitle p {
   font-size: 18px;
 }
+.single-page #subtitle-links {
+  margin-top: 10px;
+}
 #comments-block {
   background: #c4c2c3;
   padding: 15px 10px;
