@@ -22,10 +22,9 @@
 
              // set height to all elements
              for (var i=0; i<arguments.length; i++){
-               //go home IE 7 you're drunk
                var css_height = $(arguments[i]).outerHeight(); 
                if (css_height < max_height){
-                 //ugly hack for IE if you put less than 15 
+                 //hack for IE if you put less than 15 
                  //it produces an infinite loop
                  $(arguments[i]).height(max_height-15);
                }
@@ -53,16 +52,10 @@
 
         }
 
-
         // Set the same height to main-content and sidebar when the page has finished to load
         $(window).load(function(){
            autoheight("#main-content", "#sidebar");
         });
-         // var pageload = window.onload;
-         // window.onload = function() {
-         //     autoheight("#main-content", "#sidebar");
-         //     pageload();
-         // };
 
         $(document).ready(function () {
 
