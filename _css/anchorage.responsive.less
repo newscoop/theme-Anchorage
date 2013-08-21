@@ -1,0 +1,399 @@
+@import "mixins.less";
+
+/**************************************** */
+/**** Begin Responsive Media Queries **** */
+/**************************************** */
+
+
+/* --- Begin 768px to 979px screen resolution */
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+	#login-form{
+		.input-medium{
+			width: 80px;
+		}
+	}
+
+	.articles-list header, .articles-list .excerpt {
+	    width: 65%;
+	}
+
+	.extra-articles {
+	    width: 46%;
+	}
+
+	#videos .video {
+	    width: 137px;
+	}
+
+
+	.single-page{
+	    .image,{
+	        width: 93%;
+	        img{
+	        	width: 100%;
+	        }
+	    }
+	}
+
+	.section-page{
+	    .section-thumb{
+	        width: 93%;
+	        img{
+	        	width: 100%;
+	        }
+	    }
+		.articles-list header{
+			width: 100%;
+			margin-top:10px;
+		} 
+		.articles-list .excerpt {
+	   		 width: 100%;
+		}
+	}
+
+	#comment-form .form-column-right{
+		margin-top:0px !important;
+	}
+
+	#comment-form .form-column-right{
+		width: 90%;
+	}
+
+	.comment-content{
+		width: 95% !important;
+		min-height: 0;
+	}
+
+	#comment-form .form-column-left {
+	    width: 92% !important;
+	}
+
+	.debate-page{
+		.author-bio{
+			width: 70%;
+		}
+	}
+
+}
+
+/* --- End 768px to 979px screen resolution*/
+
+
+/* --- Begin 481px to 767px screen resolution */
+/* --- Landscape phone to portrait tablet */
+
+@media (min-width: 481px) and (max-width: 767px) {
+	body{
+		padding:0;
+	}
+
+	#main-content {
+	    padding: 20px 25px;
+	}
+
+	#footer{
+	    .footer-widgets{
+	    	background-position: center top;
+	    	height: 100%;
+	        > .block{
+	        	text-align: center;
+	            margin-top:10px;
+	            margin-bottom:10px;
+	            a{
+	            	display: inline-block;
+	            	margin:0px;
+	            	font-size: 11px;
+	        	}
+	        }
+	    } 
+	}
+
+	#main > .row > .span8{
+		min-height: 0px !important;
+	}
+
+	.extra-articles{
+		display: none;
+	}
+
+	.comment-content{
+		width: 95% !important;
+		min-height: 0;
+	}
+
+}
+
+/* --- End 481px to 767px screen resolution */
+
+/* --- Begin screen resolution less than 680px */
+
+@media (max-width: 680px) {
+	#comment-form .form-column-right{
+		margin-top:0px !important;
+	}
+	.comment-content{
+		width: 95% !important;
+		min-height: 0;
+	}
+	.section-page{
+	    .section-thumb{
+	        width: 53%;
+	    }
+	}
+}
+
+/* --- End screen resolution less than 680px */
+
+/* --- Begin screen resolution less than 620px */
+
+@media (max-width: 620px) {
+	body{
+		padding:0;
+	}
+
+	#main-content {
+	    padding: 20px;
+	}
+
+	#action-header{
+		display: none;
+	}
+	#action-header-phone{
+		display: block !important;
+	}
+
+	.articles-list header,.articles-list .excerpt{
+	    width: 68%;
+	}
+
+	.single-page{
+	    .image{
+	        width: 93%;
+	        img{
+	        	width: 100%;
+	        }
+	    }
+	}
+
+	.section-page{
+	    .section-thumb{
+	        width: 93%;
+	        img{
+	        	width: 100%;
+	        }
+	    }
+		.articles-list header{
+			width: 100%;
+			margin-top:10px;
+		} 
+		.articles-list .excerpt {
+	   		 width: 100%;
+		}
+	}
+
+	.debate-page{
+		.author-bio{
+			width: 70%;
+		}
+	}
+
+	#footer{
+	    .footer-widgets{
+	        > .block{
+				padding-right:10px;
+				padding-left:10px;
+	        }
+	    } 
+	}
+
+	.form-horizontal .controls {
+	    margin-left: 0px !important;
+	}
+
+	#comment-form .controls {
+	    margin-left: 7px !important;
+	}
+
+	#comment-form .form-column-left {
+	    width: 90% !important;
+	}
+
+	#comment-form .control-label {
+	    text-align: left !important;
+	    width: 100% !important;
+	    padding-left: 7px;
+	}
+
+}
+
+/* --- End screen resolution less than 620px */
+
+
+/* --- Begin screen resolution less than 480px */
+/* --- Landscape phones and down */
+
+@media (max-width: 480px) {
+
+	.articles-list header,.articles-list .excerpt{
+	    width: 100%;
+	}
+
+	.articles-list .secundary-thumb{
+		display: none !important;
+	}
+
+	#logo{
+		width: 100% !important;
+		margin:0 !important;
+		padding-left: 23%;
+		a{
+			display: block !important;
+		}
+	}
+
+	.single-page{
+	    .image{
+	        width: 91%;
+	    }
+	}
+
+	#footer{
+	    .footer-widgets{
+	    	background-position: center top;
+	    	height: 100%;
+	        > .block{
+	        	text-align: center;
+	            margin-top:10px;
+	            margin-bottom:10px;
+	            a{
+	            	display: inline-block;
+	            	margin:0px;
+	            	font-size: 11px;
+	        	}
+	        }
+	    } 
+	}
+
+	#map,.extra-articles{
+		display: none;
+	}
+
+	#main > .row > .span8{
+		min-height: 0px !important;
+	}
+
+	#action-header-phone{
+		display: none !important;
+	}
+
+	#comments-block .comment .comment-content {
+	    width: 60%;
+	}
+
+	.profile-page{
+		.profile-avatar,.profile-bio {
+		    width: 100% !important;
+		    text-align: center;
+		}
+	}
+
+	.zend_form dt label{
+	    font-size: 11px !important;
+	}
+
+    .share-buttons{
+        #facebook-button{
+            margin-top:8px;
+        }
+    }
+
+	.debate-page{
+		.author-bio{
+			width: 60%;
+		}
+	}
+
+}
+
+/* --- End screen resolution less than 480px */
+
+
+/* --- Begin screen resolution less than 380px */
+
+@media (max-width: 380px) {
+
+	.single-page{
+	    .image{
+	        width: 89%;
+	    }
+	}
+
+	.zend_form dt,.zend_form dd {
+	    width: 100%;
+	}
+
+}
+
+/* End screen resolution less than 380px --- */
+
+/* --- Begin screen resolution less than 360px */
+
+@media (max-width: 360px) {    
+	#logo{
+		padding-left: 18%;
+	}
+	.login-user-action{
+		a{
+			span{
+				display: none !important;
+			}
+		}
+	}
+	#comments-block .comment .comment-content {
+	    width: 55%;
+	}
+
+	.zend_form dt label{
+	    font-size: 10px !important;
+	}
+
+    .share-buttons{
+        #facebook-button{
+            display: none;
+        }
+    }
+
+	.debate-page{
+		.author-bio{
+			width: 100%;
+		}
+		.well-bio img{
+			float: left;
+			margin-bottom: 8px;
+		}
+	}
+
+}
+
+/* End screen resolution less than 360px --- */
+
+/* --- Begin screen resolution less than 320px */
+
+@media (max-width: 320px) {
+	#logo{
+		padding-left: 12%;
+	}
+	.single-page{
+	    .image{
+	        width: 84%;
+	    }
+	}
+}
+
+/* End screen resolution less than 320px --- */
+
+/**************************************** */
+/****** End Responsive Media Queries **** */
+/**************************************** */

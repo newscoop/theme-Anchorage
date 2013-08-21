@@ -1,0 +1,81 @@
+/* lte IE 7*/
+
+#graph{
+	*display: none !important;
+}
+
+#main-logo{
+   *width: 50%; 
+   *float: left;
+}
+
+#sidebar #login-form .input-medium {
+    *margin-left: -100px;
+}
+
+#sidebar #login-form .form-button{
+	*margin-left: -90px;
+}
+
+#sidebar #login-form #recover-link{
+	*margin-left: -130px;
+}
+
+#sidebar .weatherLink a{
+	*display: none;
+}
+
+.articles-list .secundary-thumb {
+
+    *float: left;
+    *position: static;
+}
+
+.articles-button .icon-double-angle-right {
+    *float: left;
+}
+
+.secition-page .articles-list #article-title,
+.section-page .articles-list header,
+{
+	*margin-bottom: 0px !important;
+}
+
+#sidebar #premium-articles {
+	*height: 365px;
+}
+
+.premium-articles-right,
+.premium-articles-left{
+	*height: 160px;
+}
+
+.article_rating{
+	*height: 10px !important;
+}
+
+#comments-block .comment{
+	*padding-bottom: 10px;
+}
+
+#comments-block #comment-form .controls input, 
+#comments-block #comment-form .controls textarea{
+    *margin-left: -130px;
+}
+
+
+#comments-block #comment-form #recaptcha_widget_div{
+    *margin-left: -230px;
+}
+
+#comments-block #comment-form .form-column-right{
+	*margin-top: 250px;
+}
+
+#comments-block{
+	padding-bottom: 280px;
+}
+
+#footer .bottom-footer .social-links {
+   *margin-top:10px;
+}
