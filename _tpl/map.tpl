@@ -1,5 +1,5 @@
                                 <aside id="map">
-                                    <h4 class="section-title">News Map</h4>
+                                    <h4 class="section-title">{{ #newsmap# }}</h4>
                                     <div>
 										{{* All possible constraints for setting the map can seen here:
 										https://wiki.sourcefabric.org/display/CS/Dynamic+maps+-+Constraints *}}
