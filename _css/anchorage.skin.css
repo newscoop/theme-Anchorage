@@ -424,6 +424,16 @@ h1.page-title {
 .single-page #subtitle-links {
   margin-top: 10px;
 }
+.single-page .table {
+  -webkit-box-shadow: 0px 1px 0px 0px #ffffff;
+  -moz-box-shadow: 0px 1px 0px 0px #ffffff;
+  box-shadow: 0px 1px 0px 0px #ffffff;
+}
+.single-page ul,
+.single-page ol,
+.single-page table {
+  font-size: 12px;
+}
 #comments-block {
   background: #c4c2c3;
   padding: 15px 10px;
@@ -1869,6 +1879,12 @@ hr {
   -moz-transition: background 0.5s;
   -webkit-transition: background 0.5s;
   -o-transition: background 0.5s;
+}
+.single-page blockquote {
+  border-left: 5px solid #bc0000;
+}
+.single-page blockquote p {
+  font-size: 14px;
 }
 #comments-block .comment .comment-author a {
   color: #bc0000;
