@@ -23,3 +23,8 @@ Demo
 ----
 
 http://anchorage.lab.sourcefabric.org
+
+Copyright & License
+-------------------
+
+Like Newscoop, the 'Anchorage' theme is &copy; Sourcefabric 2013 and released under the <a href="https://www.gnu.org/licenses/gpl.html">GNU General Public License, version 3</a>.
