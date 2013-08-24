@@ -97,6 +97,9 @@
             // initialize timeago plugin for dates
             $(".timeago").timeago();
 
+            // adding bootstrap style to tables in articles
+            $(".single-page table").addClass('table table-striped table-bordered');
+
             // Place holder on inputs for IE
             if(!$.support.placeholder) {
                 var active = document.activeElement;

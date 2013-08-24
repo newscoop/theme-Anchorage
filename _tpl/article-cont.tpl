@@ -92,7 +92,7 @@
         <div class="clearfix"></div>
         <ul id="subtitle-links" class="nav nav-tabs nav-stacked">
         {{ /if }}
-        <li {{ if $gimme->article->current_subtitle_no == $gimme->subtitle->number }} class="active" {{/if}}><a href="{{ url options="article" }}?{{ $gimme->article->subtitle_url_id('full_text') }}={{ $gimme->subtitle->number}}">{{ $gimme->subtitle->name }}</a></li>
+        <li {{ if $gimme->article->current_subtitle_no('full_text') == $gimme->subtitle->number }} class="active" {{/if}} ><a href="{{ url options="article" }}?{{ $gimme->article->subtitle_url_id('full_text') }}={{ $gimme->subtitle->number}}">{{ $gimme->subtitle->name }}</a></li>
         {{ if $gimme->current_list->at_end }}
         </ul>
         {{ /if }}
@@ -112,6 +112,7 @@
 	    	</ul>
 	    <a class="solid-button pull-right" href="{{ uri options="all_subtitles full_text" }}">{{ #viewFullArticle# }}</a>
 	    <div class="clearfix"></div> 
+        </div>
     {{ /if }}
 
 	{{ if $gimme->article->type_name == "news" }}

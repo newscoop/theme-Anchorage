@@ -423,6 +423,16 @@ h1.page-title {
 .single-page #subtitle-links {
   margin-top: 10px;
 }
+.single-page .table {
+  -webkit-box-shadow: 0px 1px 0px 0px #ffffff;
+  -moz-box-shadow: 0px 1px 0px 0px #ffffff;
+  box-shadow: 0px 1px 0px 0px #ffffff;
+}
+.single-page ul,
+.single-page ol,
+.single-page table {
+  font-size: 12px;
+}
 #comments-block {
   background: #c4c2c3;
   padding: 15px 10px;
