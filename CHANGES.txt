@@ -1,0 +1,17 @@
+The Anchorage theme Changelog
+=============================
+
+Here you can see the full list of changes for each Anchorage release.
+
+Version 1.0 (Requires Newscoop >= 4.2)
+--------------------------------------
+
+First public release, released on August xx, 2013.
+
+- Responsive CSS for any browser.
+- Dynamic map in front page.
+- Latest videos in front page.
+- Easy CSS theming (see "Documentation" section below).
+- Debate Support.
+- Poll support.
+
