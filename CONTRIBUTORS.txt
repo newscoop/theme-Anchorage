@@ -3,5 +3,5 @@ Anchorage Authors & Contributors
 
 The Anchorage Newscoop theme was originally created by:
 
-Byron Corrales Rivas <byroncorrales@gmail.com>, and
-Adolfo Fitoria <adolfo.fitoria@gmail.com>.
+Byron Corrales Rivas <byron@slashmango.com>, and
+Adolfo Fitoria <fitoria@slashmango.com>.
