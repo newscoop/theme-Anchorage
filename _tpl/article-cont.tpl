@@ -1,5 +1,10 @@
 {{ if $gimme->article->content_accessible }} 
-	<h1 class="page-title">{{ $gimme->article->name }}</h1>
+	<h1 class="page-title">
+        {{ $gimme->article->name }}
+        {{ if !$gimme->article->is_public }}
+        <span class="label label-important"><i class="icon-lock"></i>&nbsp;{{ #premium# }}</span>
+        {{ /if }} 
+    </h1>
 
 	{{ foreach $gimme->article->slideshows as $slideshow }}
 	{{ if $gimme->article->type_name == "news" }}
