@@ -6,7 +6,7 @@ Here you can see the full list of changes for each Anchorage release.
 Version 1.0 (Requires Newscoop >= 4.2)
 --------------------------------------
 
-First public release, released on August 27th, 2013.
+First public release, released on September 3rd, 2013.
 
 - Responsive CSS for any browser.
 - Dynamic map in front page.
