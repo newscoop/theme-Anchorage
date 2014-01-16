@@ -17,12 +17,12 @@ Features Included:
 Documentation
 -------------
 
-https://wiki.sourcefabric.org/display/CS/Anchorage+Theme+%7C+Newscoop+4.x+%7C+Release+Date:+July+2013
+http://wiki.sourcefabric.org/x/mgHQ
 
 Demo
 ----
 
-http://anchorage.lab.sourcefabric.org
+http://anchorage-dev.lab.sourcefabric.org
 
 Copyright & License
 -------------------
