@@ -14,7 +14,7 @@
                     <div class="row columns">
                         <div class="span8 column">
                             <div id="main-content" class="single-page section-page">
-                                {{ list_articles length="5" ignore_issue="true" constraints="type not poll" }}
+                                {{ list_articles length="5" ignore_section="true" ignore_issue="true" constraints="type not poll" }}
                                 <article class="articles articles-list">
                                     <figure class="section-thumb pull-left">
                                         <a href="{{ uri options="article" }}">
