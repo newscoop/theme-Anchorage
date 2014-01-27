@@ -28,7 +28,7 @@
                         <!-- Begins Sidebar -->
                         <aside id="sidebar-container" class="span4 column hidden-phone">
 
-                            {{ include "_tpl/sidebar-article.tpl" }}
+                            {{ include "_tpl/sidebar-archive.tpl" }}
                             
                         </aside>
                         <!-- / End Sidebar -->
