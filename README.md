@@ -3,7 +3,7 @@ Anchorage
 
 Modern newspaper style theme for Newscoop.
 
-![Anchorage Theme frontpage in different devices] (http://wiki.sourcefabric.org/download/attachments/13631898/anchorage-devices.png "Anchorage Theme frontpage in different devices")
+![Anchorage Theme frontpage in different devices] (http://i.imgur.com/mWttHzy.png "Anchorage Theme frontpage in different devices")
 
 Features Include:
 
