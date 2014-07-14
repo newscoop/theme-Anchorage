@@ -34,6 +34,9 @@
                             </h1>
                         </hgroup>
                         <div id="action-header" class="action-header pull-right">
+                        <div class="lang">
+                        <span>{{ #language# }}:<a href="#">EN</a>|<a href="#">DE</a></span>
+                        </div>
                             <div class="btn-group user-buttons">
                               <a href="{{ $view->url(['controller' => 'auth', 'action' =>'index'], 'default') }}" class="btn"><i class="icon-user"></i>&nbsp; Login</a>
                               <a href="/user" class="btn"><i class="icon-group"></i>&nbsp; Community</a>
