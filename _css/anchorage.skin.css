@@ -90,7 +90,7 @@ figure figcaption {
   background-image: linear-gradient(#ffffff, #ffffff 75%, #f4f4f4);
 }
 #header .banner .action-header {
-  width: 45%;
+  width: 35%;
   text-align: center;
   line-height: 82px;
   color: #ababab;
@@ -821,10 +821,6 @@ h1.page-title {
 .zend_form #fieldset-newsletter {
   display: none;
 }
-/* End Registration and Login Form --- */
-/***************************** */
-/******** End Layout ********* */
-/***************************** */
 /***************************** */
 /**** Begin Anchorage Skin *** */
 /***************************** */
@@ -1789,6 +1785,15 @@ hr {
   color: #fff;
   text-transform: uppercase;
 }
+#footer .footer-widgets .span12 p {
+  display: block;
+  font-size: 12px;
+  margin: 5px 0px 5px 30px;
+  color: #fff;
+}
+#footer .footer-widgets .span12 p a {
+  color: #fff;
+}
 #footer .bottom-footer {
   background: #353334;
   color: #7a7a7a;
@@ -2074,7 +2079,3 @@ hr {
 .dashboard-page .user-image {
   margin-bottom: 15px;
 }
-/* End Registration and Login Form   --- */
-/***************************** */
-/***** End Anchorage Skin **** */
-/***************************** */

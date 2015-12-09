@@ -26,6 +26,9 @@
                             <a target="_blank"href="http://facebook.com/sourcefabric ">{{ #beOurFan# }}<span class="visible-phone">&nbsp;|&nbsp;</span></a>
                             <a href="/en/static/rss">{{ #subscribeToOurFeed# }}</a>
                         </div>
+                        <div class="span12">
+                            <p>&copy; {{ $gimme->publication->name }} {{ $smarty.now|camp_date_format:"%Y" }} - {{ #poweredBy# }} <a target="_blank" href="http://newscoop.sourcefabric.org/">Newscoop</a>.<br />{{ #designedBy# }} <a target="_blank" href="http://www.sourcefabric.org/">Sourcefabric</a>.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="span12 bottom-footer">
