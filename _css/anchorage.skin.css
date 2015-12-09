@@ -821,10 +821,6 @@ h1.page-title {
 .zend_form #fieldset-newsletter {
   display: none;
 }
-/* End Registration and Login Form --- */
-/***************************** */
-/******** End Layout ********* */
-/***************************** */
 /***************************** */
 /**** Begin Anchorage Skin *** */
 /***************************** */
@@ -1078,6 +1074,16 @@ hr {
   -moz-transition: all 0.5s;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
+}
+#header .lang {
+  float: left;
+}
+#header .lang span {
+  border: 1px solid #cccccc;
+  border-right: none;
+  padding: 7px 12px 8px;
+  box-shadow: 0px 2px 0px 0px #ededed;
+  color: #676767;
 }
 #header .form-search .search-query {
   color: #6c6c6c;
@@ -1666,11 +1672,11 @@ hr {
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   -khtml-border-radius: 2px;
-  border-radius: 3 x;
-  -ms-border-radius: 3 x;
-  -moz-border-radius: 3 x;
-  -webkit-border-radius: 3 x;
-  -khtml-border-radius: 3 x;
+  border-radius: 3x;
+  -ms-border-radius: 3x;
+  -moz-border-radius: 3x;
+  -webkit-border-radius: 3x;
+  -khtml-border-radius: 3x;
   width: 100%;
   margin-top: -15px;
 }
@@ -1778,6 +1784,15 @@ hr {
 #footer .footer-widgets > .block a {
   color: #fff;
   text-transform: uppercase;
+}
+#footer .footer-widgets .span12 p {
+  display: block;
+  font-size: 12px;
+  margin: 5px 0px 5px 30px;
+  color: #fff;
+}
+#footer .footer-widgets .span12 p a {
+  color: #fff;
 }
 #footer .bottom-footer {
   background: #353334;
@@ -2064,7 +2079,3 @@ hr {
 .dashboard-page .user-image {
   margin-bottom: 15px;
 }
-/* End Registration and Login Form   --- */
-/***************************** */
-/***** End Anchorage Skin **** */
-/***************************** */
